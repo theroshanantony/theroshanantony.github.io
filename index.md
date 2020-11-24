@@ -73,7 +73,7 @@
                   <span class="tm-title-small">(2018 - 2022)</span>
                 </h3>
                 <p class="mb-0">
-                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technologigal University, Kerala) with current CGPA of 8.3.
+                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technological University, Kerala) with a current CGPA of 8.3.
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@
                 Project Work              </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-orange">
-                  Bluetooth Controlled Arduino Car
+                  Bluetooth Controlled Arduino Car (4 Weeks)
                   
                 </h3>
                 <p class="mb-0">
@@ -134,23 +134,22 @@
           <div class="col-12">
             <div class="tm-contact-items-container">
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-briefcase tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-cogs tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  Quisque venenatis viverra ultrices. Lorem ipsum dolor sit
-                  amet. Nullam sit amet tempor nisl.
+                  Technical Skills: <br> IT Support <br> Python Programming language
                 </p>
               </div>
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-building tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-bolt tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  You can absolutely feel free to use Mini Profile for your web page or any usage for your website.
+                  Areas Of Interest:  <br> Internet of Things <br>  Embedded Systems <br> Electric Cars
                 </p>
               </div>
 
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-balance-scale tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-magnet tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  You are NOT allowed to re-distribute this template in any download website. Else, it is illegal action.
+                  Catch me on: <br> <a href="linkedin.com/in/roshanantony">LinkedIn</a> <br> <a href="mailto:roshanantony2051@gmail.com"> Gmail </a> </p>
                 </p>
               </div>
             </div>

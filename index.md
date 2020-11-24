@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
-    <title>Roshan Antony</title>
+    <title>Mini Profile - Free Bootstrap CSS Template</title>
     
-
+<!--
+Mini Profile Template
+https://templatemo.com/tm-530-mini-profile
+-->
   </head>
   <body>
     <!-- Welcome Section -->
@@ -22,8 +25,8 @@
             <!-- Black transparent bg -->
             <div class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner">
               <div class="tm-brand-container text-center">
-                <h1 class="tm-brand-name">Bievenue!</h1>
-                <p class="tm-brand-description mb-0">Weclome to my Page</p>
+                <h1 class="tm-brand-name">Mini Profile</h1>
+                <p class="tm-brand-description mb-0">simple parallax template</p>
               </div>
             </div>
           </div>
@@ -37,18 +40,20 @@
             <!-- White transparent bg -->
             <div class="col-md-7 tm-welcome-left-col">
               <div class="tm-welcome-left">
-                <h2 class="tm-welcome-title">Welcome, I'm Roshan Antony</h2>
+                <h2 class="tm-welcome-title">Welcome to Mini Profile Page</h2>
                 <p class="pb-0">
-                 A young, creative and unique student, skilled in IT Support and Electronics. Sophomore Electronics Engineering student at the Model Engineering College, Ernakulam. Avid online learner - developed IT Support skills right from scratch with the Google IT Support Professional Certificate. A freelance content writer and Editor at MUNners Daily, the college MUNSOC Society journal. 
- </p>
+                  This is Bootstrap v4.3.1 parallax layout for you. Credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels</a> for 2 background images. In
+                  odio sapien, commodo id ullamcorper ac, dignissim at sapien.
+                  Nullam leo massa, vaius ac massa et, tincidunt imperdiet
+                turpis. </p>
               </div>
             </div>
             <!-- Brown bg -->
             <div class="col-md-5">
               <div class="tm-welcome-right">
-                  <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
+                <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
                 <p class="mb-0">
-                  Roshan Antony <br>+91 9188703044<br>Kochi, Kerala, India
+                  Please spread a word about templatemo website. Anyone can download free Bootstrap CSS templates.
                 </p>
               </div>
             </div>
@@ -65,62 +70,75 @@
           <div class="col-12">
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-green">
-                Batchelor Of Technology
+                Project Manager
               </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-green">
-                  Model Engineering College Kochi
-                  <span class="tm-title-small">(2018 - 2022)</span>
+                  New Company
+                  <span class="tm-title-small">(2019 January to Present)</span>
                 </h3>
                 <p class="mb-0">
-                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technological University, Kerala) with a current CGPA of 8.3.
+                  Nullam a tellus ultricies, ornare purus vel, porttitor massa.
+                  Aliquam facilisis purus ac eros sollicidudin, in mollis neque
+                  facilisis. Duis malesuada, mi non elementum malesuada.
                 </p>
               </div>
             </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-orange">
-                Project Work              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-orange">
-                  Bluetooth Controlled Arduino Car (4 Weeks)
-                  
-                </h3>
-                <p class="mb-0">
-                  Designed and Implemented a Bluetooth Controlled Arduino Car, controlled via Smartphone <br> Role: Team Leader <br> Technology Used: Arduino IDE, Bluetooth
-                </p>
+                Senior UX Designer
               </div>
-            </div>
-            
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-orange">
-                Project Work              </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-orange">
-                  Non Contact Voltage Tester (2 Weeks)
-                  
+                  Studio One
+                  <span class="tm-title-small">(2017 April to 2018 Dec)</span>
                 </h3>
                 <p class="mb-0">
-                  Designed and Implemented a Non Contact Voltage Tester that lights up and sounds an alarm when bought near an active circuit, to confirm that it has detected the presence of a voltage <br> Role: Team Leader (2 Members) <br> Principle Used: Magnetic Induction</p>
+                  Phasellus ac nulla egestas, malesuada dolor quis, scelerisque
+                  arcu. Morbi aliquam, nunc vel blandit mattis, sapien nisl
+                  convallis sem, quis hendrerit nisl tellus in lectus. Proin at
+                  nibh bibendum, tincidunt mauris sit amet, porta risus. Integer
+                  id malesuada ligula.
+                </p>
               </div>
             </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-blue">
-                Internship
+                Graphic Designer
               </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-blue">
-                  OpenStreetMap Developer at Kerala Mapathon
-                  <span class="tm-title-small">(2 weeks)</span>
+                  Digital Com
+                  <span class="tm-title-small">(2015 Jan to 2016 Dec)</span>
                 </h3>
                 <p class="mb-0">
-                  Helped in developing Open Street Map for the State of Kerala. <br> Software Used: Open Street Map
+                  Etiam porta est nisl, consectetur dapibus ante faucibus id.
+                  Nunc ullamcorper a quam eget tincidunt. Proin vehicula mauris
+                  ipsum, euismod dignissim dolor convallis ac.
                 </p>
               </div>
             </div>
 
-            
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-dark-gray">
+                Design School
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-dark-gray">
+                  Art Design College
+                  <span class="tm-title-small">
+                    (2012 May to 2014 Dec)
+                  </span>
+                </h3>
+                <p class="mb-0">
+                  Etiam porta est nisl, consectetur dapibus ante faucibus id.
+                  Nunc ullamcorper a quam eget tincidunt. Proin vehicula mauris
+                  ipsum, euismod dignissim dolor convallis ac.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -134,22 +152,23 @@
           <div class="col-12">
             <div class="tm-contact-items-container">
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-cogs tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-briefcase tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  <u>Technical Skills</u>: <br> IT Support <br> Python Programming language
+                  Quisque venenatis viverra ultrices. Lorem ipsum dolor sit
+                  amet. Nullam sit amet tempor nisl.
                 </p>
               </div>
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-bolt tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-building tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  <u>Areas Of Interest</u>:  <br> Internet of Things <br>  Embedded Systems <br> Electric Cars
+                  You can absolutely feel free to use Mini Profile for your web page or any usage for your website.
                 </p>
               </div>
 
               <div class="tm-contact-item">
-                <i class="fas fa-5x fa-magnet tm-contact-item-icon"></i>
+                <i class="fas fa-5x fa-balance-scale tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  <u>Catch me on</u>: <br> <a href="linkedin.com/in/roshanantony">LinkedIn</a> <br> <a href="mailto:roshanantony2051@gmail.com"> Gmail </a> 
+                  You are NOT allowed to re-distribute this template in any download website. Else, it is illegal action.
                 </p>
               </div>
             </div>
@@ -209,7 +228,7 @@
         <div class="row">
           <footer class="col-12">
             <p class="text-center tm-copyright-text">
-            Copyright 2020 Roshan Antony
+            Copyright 2020 Mini Profile Page 
             
             - Design: Template Mo</p>
           </footer>
@@ -254,4 +273,3 @@
       });
     </script>
   </body>
-</html>

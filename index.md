@@ -48,7 +48,7 @@
               <div class="tm-welcome-right">
                  <i class="fas fa-5x fa-info-circle"></i>
                 <p class="mb-0">
-                  Roshan Antony <br>9188703044<br>Kochi, Kerala, India
+                  Roshan Antony <br>+91 9188703044<br>Kochi, Kerala, India
                 </p>
               </div>
             </div>
@@ -65,36 +65,30 @@
           <div class="col-12">
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-green">
-                Project Manager
+                Batchelor Of Technology
               </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-green">
-                  New Company
-                  <span class="tm-title-small">(2019 January to Present)</span>
+                  Model Engineering College Kochi
+                  <span class="tm-title-small">(2018 - 2022)</span>
                 </h3>
                 <p class="mb-0">
-                  Nullam a tellus ultricies, ornare purus vel, porttitor massa.
-                  Aliquam facilisis purus ac eros sollicidudin, in mollis neque
-                  facilisis. Duis malesuada, mi non elementum malesuada.
+                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technologigal University, Kerala) with Current CGPA of 8.3.
                 </p>
               </div>
             </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-orange">
-                Senior UX Designer
+                Project
               </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-orange">
-                  Studio One
-                  <span class="tm-title-small">(2017 April to 2018 Dec)</span>
+                  Bluetooth Controlled Arduino Car
+                  
                 </h3>
                 <p class="mb-0">
-                  Phasellus ac nulla egestas, malesuada dolor quis, scelerisque
-                  arcu. Morbi aliquam, nunc vel blandit mattis, sapien nisl
-                  convallis sem, quis hendrerit nisl tellus in lectus. Proin at
-                  nibh bibendum, tincidunt mauris sit amet, porta risus. Integer
-                  id malesuada ligula.
+                  Designed and Implemented a Bluetooth Controlled Arduino Car, controlled via Smartphone <br> Role: Team Leader <br> Technology Used: Arduino IDE, Bluetooth
                 </p>
               </div>
             </div>

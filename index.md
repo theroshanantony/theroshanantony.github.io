@@ -73,15 +73,14 @@
                   <span class="tm-title-small">(2018 - 2022)</span>
                 </h3>
                 <p class="mb-0">
-                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technologigal University, Kerala) with Current CGPA of 8.3.
+                  Pursuing Batchelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technologigal University, Kerala) with current CGPA of 8.3.
                 </p>
               </div>
             </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-orange">
-                Project
-              </div>
+                Project Work              </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-orange">
                   Bluetooth Controlled Arduino Car
@@ -92,42 +91,36 @@
                 </p>
               </div>
             </div>
+            
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-orange">
+                Project Work              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-orange">
+                  Non Contact Voltage Tester (2 Weeks)
+                  
+                </h3>
+                <p class="mb-0">
+                  Designed and Implemented a Non Contact Voltage Tester that lights up and sounds an alarm when bought near an active circuit, to confirm that it has detected the presence of a voltage <br> Role: Team Leader (2 Members) <br> Principle Used: Magnetic Induction</p>
+              </div>
+            </div>
 
             <div class="tm-portfolio-item">
               <div class="tm-portfolio-name text-white tm-bg-blue">
-                Graphic Designer
+                Internship
               </div>
               <div class="tm-portfolio-description">
                 <h3 class="tm-text-blue">
-                  Digital Com
-                  <span class="tm-title-small">(2015 Jan to 2016 Dec)</span>
+                  OpenStreetMap Developer at Kerala Mapathon
+                  <span class="tm-title-small">(2 weeks)</span>
                 </h3>
                 <p class="mb-0">
-                  Etiam porta est nisl, consectetur dapibus ante faucibus id.
-                  Nunc ullamcorper a quam eget tincidunt. Proin vehicula mauris
-                  ipsum, euismod dignissim dolor convallis ac.
+                  Helped in developing Open Street Map for the State of Kerala. <br> Software Used: Open Street Map
                 </p>
               </div>
             </div>
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-dark-gray">
-                Design School
-              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-dark-gray">
-                  Art Design College
-                  <span class="tm-title-small">
-                    (2012 May to 2014 Dec)
-                  </span>
-                </h3>
-                <p class="mb-0">
-                  Etiam porta est nisl, consectetur dapibus ante faucibus id.
-                  Nunc ullamcorper a quam eget tincidunt. Proin vehicula mauris
-                  ipsum, euismod dignissim dolor convallis ac.
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -46,7 +46,7 @@
             <!-- Brown bg -->
             <div class="col-md-5">
               <div class="tm-welcome-right">
-                 <i class="fas fa-5x fa-info-circle"></i>
+                  <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
                 <p class="mb-0">
                   Roshan Antony <br>+91 9188703044<br>Kochi, Kerala, India
                 </p>
@@ -136,20 +136,20 @@
               <div class="tm-contact-item">
                 <i class="fas fa-5x fa-cogs tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  Technical Skills: <br> IT Support <br> Python Programming language
+                  <u>Technical Skills</u>: <br> IT Support <br> Python Programming language
                 </p>
               </div>
               <div class="tm-contact-item">
                 <i class="fas fa-5x fa-bolt tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  Areas Of Interest:  <br> Internet of Things <br>  Embedded Systems <br> Electric Cars
+                  <u>Areas Of Interest</u>:  <br> Internet of Things <br>  Embedded Systems <br> Electric Cars
                 </p>
               </div>
 
               <div class="tm-contact-item">
                 <i class="fas fa-5x fa-magnet tm-contact-item-icon"></i>
                 <p class="mb-0">
-                  Catch me on: <br> <a href="linkedin.com/in/roshanantony">LinkedIn</a> <br> <a href="mailto:roshanantony2051@gmail.com"> Gmail </a> </p>
+                  <u>Catch me on</u>: <br> <a href="linkedin.com/in/roshanantony">LinkedIn</a> <br> <a href="mailto:roshanantony2051@gmail.com"> Gmail </a> 
                 </p>
               </div>
             </div>
@@ -209,7 +209,7 @@
         <div class="row">
           <footer class="col-12">
             <p class="text-center tm-copyright-text">
-            Copyright 2020 Mini Profile Page 
+            Copyright 2020 Roshan Antony
             
             - Design: Template Mo</p>
           </footer>

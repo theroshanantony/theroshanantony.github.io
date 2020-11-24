@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
-    <title>Mini Profile - Free Bootstrap CSS Template</title>
+    <title>Roshan Antony</title>
     
-<!--
-Mini Profile Template
-https://templatemo.com/tm-530-mini-profile
--->
+
   </head>
   <body>
     <!-- Welcome Section -->

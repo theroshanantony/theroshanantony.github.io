@@ -25,8 +25,8 @@ https://templatemo.com/tm-530-mini-profile
             <!-- Black transparent bg -->
             <div class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner">
               <div class="tm-brand-container text-center">
-                <h1 class="tm-brand-name">Mini Profile</h1>
-                <p class="tm-brand-description mb-0">simple parallax template</p>
+                <h1 class="tm-brand-name">Bievenue!</h1>
+                <p class="tm-brand-description mb-0">Weclome to my Page</p>
               </div>
             </div>
           </div>
@@ -40,20 +40,18 @@ https://templatemo.com/tm-530-mini-profile
             <!-- White transparent bg -->
             <div class="col-md-7 tm-welcome-left-col">
               <div class="tm-welcome-left">
-                <h2 class="tm-welcome-title">Welcome to Mini Profile Page</h2>
+                <h2 class="tm-welcome-title">Welcome, I'm Roshan Antony</h2>
                 <p class="pb-0">
-                  This is Bootstrap v4.3.1 parallax layout for you. Credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels</a> for 2 background images. In
-                  odio sapien, commodo id ullamcorper ac, dignissim at sapien.
-                  Nullam leo massa, vaius ac massa et, tincidunt imperdiet
-                turpis. </p>
+                 A young, creative and unique student, skilled in IT Support and Electronics. Sophomore Electronics Engineering student at the Model Engineering College, Ernakulam. Avid online learner - developed IT Support skills right from scratch with the Google IT Support Professional Certificate. A freelance content writer and Editor at MUNners Daily, the college MUNSOC Society journal. 
+ </p>
               </div>
             </div>
             <!-- Brown bg -->
             <div class="col-md-5">
               <div class="tm-welcome-right">
-                <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
+                <i class="fas fa-info-circle"></i>
                 <p class="mb-0">
-                  Please spread a word about templatemo website. Anyone can download free Bootstrap CSS templates.
+                  Roshan Antony <br>9188703044<br>Kochi, Kerala, India
                 </p>
               </div>
             </div>

@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,7 +46,7 @@
             <!-- Brown bg -->
             <div class="col-md-5">
               <div class="tm-welcome-right">
-                <i class="fas fa-info-circle"></i>
+                 <i class="fas fa-5x fa-info-circle"></i>
                 <p class="mb-0">
                   Roshan Antony <br>9188703044<br>Kochi, Kerala, India
                 </p>

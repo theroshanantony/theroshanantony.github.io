@@ -1,230 +1,223 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Resume</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f5f9; /* Pastel blue background */
+      color: #1c2732; /* Dark text color */
+      margin: 0;
+      padding: 0;
+    }
 
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/templatemo-style.css" />
-    
+    header {
+      background-color: #61a0af; /* Header background color */
+      padding: 20px;
+      text-align: center;
+      color: #fff; /* Header text color */
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      cursor: pointer;
+    }
 
-  </head>
-  <body>
-    <!-- Welcome Section -->
-    <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="img/mini-profile-bg-01.jpg">
-      <div class="container-fluid tm-brand-container-outer">
-        <div class="row">
-          <div class="col-12">
-            <!-- Logo Area -->
-            <!-- Black transparent bg -->
-            <div class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner">
-              <div class="tm-brand-container text-center">
-                <h1 class="tm-brand-name">Biévenue!</h1>
-                <p class="tm-brand-description mb-0">Weclome to my Page</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    section {
+      padding: 21px;
+      border-radius: 10px;
+      background-color: #fff; /* White background for each section */
+      margin-top: 20px;
+      display: none; /* Initially hide the resume content */
+    }
 
-      <div class="tm-bg-white-transparent tm-welcome-container">
-        <div class="container-fluid">
-          <div class="row h-100">
-            <!-- Welcome Text -->
-            <!-- White transparent bg -->
-            <div class="col-md-7 tm-welcome-left-col">
-              <div class="tm-welcome-left">
-                <h2 class="tm-welcome-title">Welcome, I'm Roshan Antony</h2>
-                <p class="pb-0">
-                 A young, creative and unique student, skilled in IT Support and Electronics. A third year Electronics Engineering student at the Model Engineering College, Ernakulam. Avid online learner - developed IT Support skills right from scratch with the Google IT Support Professional Certificate. A freelance content writer and Editor at MUNners Daily, the college MUNSOC Society journal. 
- </p>
-              </div>
-            </div>
-            <!-- Brown bg -->
-            <div class="col-md-5">
-              <div class="tm-welcome-right">
-                  <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
-                <p class="mb-0">
-                  Roshan Antony <br>+91 9188703044<br>Kochi, Kerala, India
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Welcome section -->
+    h2 {
+      color: #3b4b5a; /* Subheadings color */
+    }
 
-    <!-- Portfolio section -->
-    <section id="tmPortfolio">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-green">
-                Bachelor Of Technology
-              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-green">
-                  Model Engineering College Kochi
-                  <span class="tm-title-small">(2018 - 2022)</span>
-                </h3>
-                <p class="mb-0">
-                  Pursuing Bachelors of Technology at the Model Engineering College Kochi (Affiliated to APJ Abdul Kalam Technological University, Kerala) with a current CGPA of 8.35.
-                </p>
-              </div>
-            </div>
+    .certificates {
+      border-radius: 10px;
+      background-color: #fff; /* White background for certificates */
+      margin-top: 20px;
+      padding: 15px;
+    }
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-orange">
-                Project Work              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-orange">
-                  Bluetooth Controlled Arduino Car 
-                  <span class="tm-title-small">(4 weeks)</span>
-                </h3>
-                <p class="mb-0">
-                  Designed and Implemented a Bluetooth Controlled Arduino Car, controlled via Smartphone <br> Role: Team Leader (2 Members) <br> Technology Used: Arduino IDE, Bluetooth
-                </p>
-              </div>
-            </div>
-            
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-orange">
-                Project Work              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-orange">
-                  Non Contact Voltage Tester 
-                  <span class="tm-title-small">(2 weeks)</span>
-                </h3>
-                <p class="mb-0">
-                  Designed and Implemented a Non Contact Voltage Tester that lights up and sounds an alarm when bought near an active circuit, to confirm that it has detected the presence of a voltage <br> Role: Team Leader (2 Members) <br> Principle Used: Magnetic Induction</p>
-              </div>
-            </div>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue">
-                Internship
-              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-blue">
-                  OpenStreetMap Developer at Kerala Mapathon
-                  <span class="tm-title-small">(2 weeks)</span>
-                </h3>
-                <p class="mb-0">
-                  Helped in developing Open Street Map for the State of Kerala. <br> Software Used: Open Street Map
-                </p>
-              </div>
-            </div>
-            
-            <div class="tm-portfolio-item">
-              <div class="tm-portfolio-name text-white tm-bg-blue">
-                Work Experience
-              </div>
-              <div class="tm-portfolio-description">
-                <h3 class="tm-text-blue">
-                  Student Expert - Electrial Engineering <br> Chegg
-                  <span class="tm-title-small">(1 Year)</span>
-                </h3>
-                <p class="mb-0">
-                  Helped students with their coursework on Electrical Engineering
-                </p>
-              </div>
-            </div>         
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
 
-            
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End portfolio section -->
+    .competencies {
+      background-color: #f0f5f9; /* Light blue background for competencies */
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
 
-    <!-- Contact section -->
-    <div id="tmContact" class="parallax-window" data-parallax="scroll" data-image-src="img/mini-profile-bg-02.jpg">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="tm-contact-items-container">
-              <div class="tm-contact-item">
-                <i class="fas fa-5x fa-cogs tm-contact-item-icon"></i>
-                <p class="mb-0">
-                  <u>Technical Skills</u>: <br> IT Support <br> Python Programming language
-                </p>
-              </div>
-              <div class="tm-contact-item">
-                <i class="fas fa-5x fa-bolt tm-contact-item-icon"></i>
-                <p class="mb-0">
-                  <u>Areas Of Interest</u>:  <br> Internet of Things <br>  Embedded Systems <br> Electric Cars
-                </p>
-              </div>
-              <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-4b0529f0-a13f-41fc-a9a8-60c267359f9c"></div>
+    .certificate-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
 
-              <div class="tm-contact-item">
-                <i class="fas fa-5x fa-magnet tm-contact-item-icon"></i>
-                <p class="mb-0">
-                  <u>Catch me on</u>: <br> <a href="https://linkedin.com/in/roshanantony">LinkedIn</a> <br> <a href="mailto:roshanantony2051@gmail.com"> Gmail </a> 
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-6fdbe494-e77d-43bd-8edc-2144a2c197c7"></div>
-        
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-a9122d02-5d8f-481b-b9af-3ec08f1d9bc5"></div>
-        
-        <!-- row -->
-        <div class="row">
-          <footer class="col-12">
-            <p class="text-center tm-copyright-text">
-            Copyright 2020 Roshan Antony
-            </p>
-          </footer>
-        </div>
-      </div>
-      <!-- container -->
+    .certificate-image {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .download-button {
+      background-color: #61a0af;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .welcome-screen {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .welcome-photo {
+      width: 50%;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .resume-button {
+      background-color: #61a0af;
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header onclick="showResume()">
+    <h1>Your Name</h1>
+    <p>Electronics & IT Professional</p>
+  </header>
+
+  <!-- Welcome Screen -->
+  <section class="welcome-screen">
+    <img src="path/to/your-photo.jpg" alt="Your Photo" class="welcome-photo">
+    <div>
+      <h1 style="font-size: 36px; font-weight: bold;">Welcome to My Resume!</h1>
+      <p>Passionate Electronics & IT Professional</p>
+      <p>Click below to view my resume.</p>
+      <a href="#" class="resume-button">View Resume</a>
     </div>
-    <!-- section -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script>
-      function detectMsBrowser() {
-        using_ms_browser =
-          navigator.appName == "Microsoft Internet Explorer" ||
-          (navigator.appName == "Netscape" &&
-            navigator.appVersion.indexOf("Edge") > -1) ||
-          (navigator.appName == "Netscape" &&
-            navigator.appVersion.indexOf("Trident") > -1);
+  </section>
 
-        if (using_ms_browser == true) {
-          alert(
-            "Please use Chrome or Firefox for the best browsing experience!"
-          );
-        }
+  <!-- Resume Content -->
+  <section class="experience">
+    <h2>Work Experience</h2>
+    <p>...</p> <!-- Add your work experience details here -->
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <p>...</p> <!-- Add your project details here -->
+  </section>
+
+  <section class="courses">
+    <h2>Courses & Certifications</h2>
+    <ul class="certificates">
+      <!-- Add your courses and certifications here -->
+      <li onclick="showCertificate('certificate1')">Certification 1</li>
+      <li onclick="showCertificate('certificate2')">Certification 2</li>
+      <!-- Add more certifications with unique IDs -->
+    </ul>
+  </section>
+
+  <section class="achievements">
+    <h2>Achievements & Co-Curricular Activities</h2>
+    <ul>
+      <!-- Add your achievements and activities here -->
+      <li>...</li>
+    </ul>
+  </section>
+
+  <section class="competencies">
+    <h2>Core Competencies / Skills</h2>
+    <ul>
+      <li>Microsoft Office (Word, Excel, PowerPoint & PowerBI)</li>
+      <li>Quality Control</li>
+      <li>Agile Methodologies</li>
+      <li>AutoCAD</li>
+      <li>Programming Languages: Python and Embedded C</li>
+      <!-- Add more skills as needed -->
+    </ul>
+  </section>
+
+  <div class="certificate-overlay" id="certificate-overlay">
+    <img src="" alt="Certificate" class="certificate-image" id="certificate-image">
+  </div>
+
+  <a href="#" onclick="downloadResume()" class="download-button">Download Resume</a>
+
+  <script>
+    function showCertificate(certificateId) {
+      const certificateOverlay = document.getElementById('certificate-overlay');
+      const certificateImage = document.getElementById('certificate-image');
+
+      // Set the source of the certificate image based on the clicked certificate
+      switch (certificateId) {
+        case 'certificate1':
+          certificateImage.src = 'path/to/certificate1.jpg'; // Replace with the actual path
+          break;
+        case 'certificate2':
+          certificateImage.src = 'path/to/certificate2.jpg'; // Replace with the actual path
+          break;
+        // Add more cases for additional certificates
       }
-      function setBrandMarginTop() {
-        var bottomContainerHeight = $(".tm-welcome-container").height();
 
-        $(".tm-brand-container-outer").css({
-          "margin-top": -bottomContainerHeight + "px"
-        });
-      }
+      // Show the certificate overlay
+      certificateOverlay.style.display = 'flex';
+    }
 
-      $(function() {
-        setBrandMarginTop();
-        detectMsBrowser();
+    function downloadResume() {
+      // Replace with the actual path to your PDF resume
+      const resumePath = 'path/to/your-resume.pdf';
+      const link = document.createElement('a');
+      link.href = resumePath;
+      link.download = 'Your_Name_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 
-        // Handle window resize event
-        $(window).resize(function() {
-          setBrandMarginTop();
-        });
+    function showResume() {
+      // Hide the welcome screen
+      document.querySelector('.welcome-screen').style.display = 'none';
+      
+      // Display the resume content
+      const resumeSections = document.querySelectorAll('section');
+      resumeSections.forEach(section => {
+        section.style.display = 'block';
       });
-    </script>
-  </body>
+    }
+  </script>
+
+</body>
 </html>

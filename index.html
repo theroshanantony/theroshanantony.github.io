@@ -30,13 +30,38 @@
       margin-top: 20px;
     }
 
+    .welcome-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .welcome-text {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+
+    .welcome-photo {
+      width: 50%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
     .experience-content {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
     }
 
+    .company-logo {
+      width: 50px; /* Adjust the size of the logo */
+      margin-right: 10px;
+    }
+
     .company-name {
+      display: flex;
+      align-items: center;
       font-size: 24px; /* Increased font size for the company name */
       font-weight: bold;
     }
@@ -46,6 +71,8 @@
       padding: 20px;
       border-radius: 10px;
       margin-top: 20px;
+      display: flex;
+      align-items: center;
     }
 
     .details-rectangle {
@@ -57,7 +84,15 @@
     }
 
     h2 {
+      font-family: 'Comic Sans MS', sans-serif; /*the FONTTTTTTTT?*/
+      font-size: 32px;
       color: #3b4b5a; /* Subheadings color */
+      margin-bottom: 10px;
+    }
+
+    .bullet-points {
+      list-style-type: disc;
+      margin-left: 20px;
     }
 
     .certificates {
@@ -79,7 +114,21 @@
     }
 
     .competencies {
-      background-color: #f0f5f9; /* Light blue background for competencies */
+      background-color: #fff; /* White background for competencies */
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .competency-rectangle {
+      background-color: #aec9d9; /* Whitish pastel blue background for competencies */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .references {
+      background-color: #fff; /* White background for references */
       padding: 20px;
       margin-top: 20px;
       border-radius: 10px;
@@ -125,8 +174,8 @@
 
   <!-- Welcome Screen -->
   <section class="welcome-screen">
-    <img src="path/to/your-photo.jpg" alt="Your Photo" style="width: 50%; border-radius: 50%; margin-bottom: 20px;">
-    <div>
+    <div class="welcome-text">
+      <img src="path/to/your-photo.jpg" alt="Your Photo" class="welcome-photo">
       <h1 style="font-size: 36px; font-weight: bold;">Welcome to My Resume!</h1>
       <p>Passionate Electronics & IT Professional</p>
     </div>
@@ -137,56 +186,66 @@
     <h2>Work Experience</h2>
     <div class="experience-content">
       <div class="rounded-rectangle">
+        <img src="path/to/company-logo.png" alt="Company Logo" class="company-logo">
         <p class="company-name">Bosch Global Software Technologies</p>
       </div>
       <div class="details-rectangle">
         <p>
-          Associate Software Engineer | August 2022 – Present
+          <ul class="bullet-points">
+            <li>Associate Software Engineer | August 2022 – Present</li>
+            <li>Application Software developer for Antilock Braking Systems (ABS) for EU and North American Projects.</li>
+            <li>Proficient in analyzing software requirements, designing solutions, coding, conducting thorough testing, and executing successful deployments.</li>
+            <li>Integrated software at the end of every baseline - combining individual software components and verifying their functionality as a whole.</li>
+            <li>Generated monthly team load reports using PowerBI to assess resource availabilities and foresee overloading situations beforehand.</li>
+          </ul>
         </p>
-        <ul>
-          <li>Application Software developer for Antilock Braking Systems (ABS) for EU and North American Projects.</li>
-          <li>Proficient in analyzing software requirements, designing solutions, coding, conducting thorough testing, and executing successful deployments.</li>
-          <li>Integrated software at the end of every baseline - combining individual software components and verifying their functionality as a whole.</li>
-          <li>Generated monthly team load reports using PowerBI to assess resource availabilities and foresee overloading situations beforehand.</li>
-        </ul>
       </div>
     </div>
   </section>
 
   <section class="projects">
     <h2>Projects</h2>
+
+    <!-- Blind Source Signal Separation of Polyphonic Music Signals -->
     <div class="rounded-rectangle">
-      <p class="company-name">Blind Source Signal separation of Polyphonic Music Signals</p>
+      <p class="company-name">Blind Source Signal Separation of Polyphonic Music Signals</p>
     </div>
     <div class="details-rectangle">
-      <p>...</p> <!-- Add your project details here -->
+      <p>
+        The primary objective of this project was to conduct a comprehensive evaluation and comparison of various methodologies employed in Blind Source Separation (BSS) for analyzing harmonically related polyphonic signals.
+        The scope of the study encompasses diverse scenarios, including the extraction of distinct instrumental components spanning a wide range of frequencies, vocal isolation from musical compositions, and the elimination of ambient crowd noise from live concert recordings.
+        Also, one medical application that we considered was Blind Separation of Twin Fetal Heartbeats in an Electrocardiogram.
+        The efficacy and quality of the estimated signals are scrutinized through the utilization of multiple quantitative metrics, thus enabling a comprehensive analysis. The research delves into three key areas: (1) BSS algorithms tailored for static models involving instantaneous mixtures, (2) the augmentation of BSS and Independent Component Analysis (ICA) through integration with sparseness or non-negativity constraints, and (3) BSS algorithms specifically designed for dynamic models entailing convolutive mixtures. Furthermore, the project explores three prominent methodologies: Independent Component Analysis (ICA), Non-Negative Matrix Factorization (NMF), and Neural Networks. This endeavor contributes to an in-depth understanding of the effectiveness and suitability of these approaches for Blind Source Separation, thereby facilitating advancements in audio signal processing.
+      </p>
+      <p><strong>Skills:</strong> Convolutional Neural Networks (CNN) · Fourier Analysis · Independent Component Analysis · Machine Learning</p>
     </div>
 
+    <!-- Airbag Jacket for Motorcyclists (Design) -->
     <div class="rounded-rectangle">
-      <p class="company-name">Coronavirus Breathalyzer (Design)</p>
+      <p class="company-name">Airbag Jacket for Motorcyclists (Design)</p>
     </div>
     <div class="details-rectangle">
-      <p>Designed a diagnostic medical device enabling the user to test with 90% or greater accuracy, the presence of SARS Coronavirus-2 in an exhaled breath sample.</p>
+      <p>
+        The idea was to create an inflatable, reusable airbag for motorcyclists, which can reduce the risk of death or permanent disability in case of a crash. Hence, we came up with the design for an airbag suit for bike riders which deploys with the help of embedded sensors in the suit as and when the suit senses a sudden change in rider's velocity, or before impact.
+      </p>
     </div>
 
+    <!-- Non-Contact Voltage Tester -->
     <div class="rounded-rectangle">
-      <p class="company-name">Non-contact Voltage Tester</p>
+      <p class="company-name">Non-Contact Voltage Tester</p>
     </div>
     <div class="details-rectangle">
-      <p>Our innovative non-contact voltage tester eliminates the need for physical contact, ensuring user safety during crucial electrical testing. Its intuitive design and clear visual/audio alerts provide instant voltage confirmation, empowering users of all skill levels.</p>
-    </div>
-
-    <div class="rounded-rectangle">
-      <p class="company-name">Arduino Bluetooth Controlled Car</p>
-    </div>
-    <div class="details-rectangle">
-      <p>Developed a Bluetooth Controlled Car using Arduino, which can be controlled using a smartphone.</p>
+      <p>
+        We designed and implemented a Non-Contact Voltage Tester based on the principle of electromagnetic induction.
+        This innovative device incorporates a mechanism that illuminates and triggers an audible alarm and an LED, to confirm the detection of voltage without requiring direct contact.
+        The voltage tester provides a safe, efficient, and user-friendly solution for identifying the presence of electrical potential in a given area, which enhances safety measures and streamlines electrical troubleshooting processes in various applications, ensuring the well-being and operational efficiency of users.
+      </p>
     </div>
   </section>
 
   <section class="achievements">
     <h2>Achievements & Co-Curricular Activities</h2>
-    <ul>
+    <ul class="bullet-points">
       <li>Mentored new joinees and freshers to ensure a smooth on-boarding experience at Bosch.</li>
       <li>Volunteer, Careers360, a career development organization.</li>
       <li>Content Writer, IETE SF MEC and ILLUMINATION on Medium.org [@theroshanantony].</li>
@@ -218,14 +277,39 @@
 
   <section class="competencies">
     <h2>Core Competencies / Skills</h2>
-    <ul>
-      <li>Microsoft Office (Word, Excel, PowerPoint & PowerBI)</li>
-      <li>Quality Control</li>
-      <li>Agile Methodologies</li>
-      <li>AutoCAD</li>
-      <li>Programming Languages: Python and Embedded C</li>
-      <!-- Add more skills as needed -->
-    </ul>
+    <div class="competency-rectangle">
+      <ul>
+        <li>Microsoft Office (Word, Excel, PowerPoint & PowerBI)</li>
+      </ul>
+    </div>
+    <div class="competency-rectangle">
+      <ul>
+        <li>Quality Control</li>
+      </ul>
+    </div>
+    <div class="competency-rectangle">
+      <ul>
+        <li>Agile Methodologies</li>
+      </ul>
+    </div>
+    <div class="competency-rectangle">
+      <ul>
+        <li>AutoCAD</li>
+      </ul>
+    </div>
+    <div class="competency-rectangle">
+      <ul>
+        <li>Programming Languages: Python and Embedded C</li>
+        <!-- Add more skills as needed -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="references">
+    <h2>References</h2>
+    <div class="rounded-rectangle">
+      <p>Available upon request.</p>
+    </div>
   </section>
 
   <div class="certificate-overlay" id="certificate-overlay">

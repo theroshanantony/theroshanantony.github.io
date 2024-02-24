@@ -24,11 +24,36 @@
     }
 
     section {
-      padding: 21px;
+      padding: 20px;
       border-radius: 10px;
       background-color: #fff; /* White background for each section */
       margin-top: 20px;
-      display: none; /* Initially hide the resume content */
+    }
+
+    .experience-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .company-name {
+      font-size: 24px; /* Increased font size for the company name */
+      font-weight: bold;
+    }
+
+    .rounded-rectangle {
+      background-color: #aec9d9; /* Whitish pastel blue background for work experience */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .details-rectangle {
+      background-color: #fff; /* White background for work experience details */
+      padding: 20px;
+      border-radius: 10px;
+      margin-left: 20px;
+      flex-grow: 1;
     }
 
     h2 {
@@ -50,6 +75,7 @@
     li {
       margin-bottom: 10px;
       cursor: pointer;
+      color: #1c2732; /* Dark text color */
     }
 
     .competencies {
@@ -79,82 +105,114 @@
       border-radius: 10px;
     }
 
-    .download-button {
-      background-color: #61a0af;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 20px;
+    a {
+      color: #0066cc; /* Link color */
+      text-decoration: underline;
       cursor: pointer;
     }
 
-    .welcome-screen {
-      text-align: center;
-      padding: 50px;
-    }
-
-    .welcome-photo {
-      width: 50%;
-      border-radius: 50%;
-      margin-right: 20px;
-    }
-
-    .resume-button {
-      background-color: #61a0af;
-      color: #fff;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      cursor: pointer;
+    a:hover {
+      color: #004080; /* Link color on hover */
     }
   </style>
 </head>
 <body>
 
-  <header onclick="showResume()">
+  <header>
     <h1>Your Name</h1>
     <p>Electronics & IT Professional</p>
   </header>
 
   <!-- Welcome Screen -->
   <section class="welcome-screen">
-    <img src="path/to/your-photo.jpg" alt="Your Photo" class="welcome-photo">
+    <img src="path/to/your-photo.jpg" alt="Your Photo" style="width: 50%; border-radius: 50%; margin-bottom: 20px;">
     <div>
       <h1 style="font-size: 36px; font-weight: bold;">Welcome to My Resume!</h1>
       <p>Passionate Electronics & IT Professional</p>
-      <p>Click below to view my resume.</p>
-      <a href="#" class="resume-button">View Resume</a>
     </div>
   </section>
 
   <!-- Resume Content -->
   <section class="experience">
     <h2>Work Experience</h2>
-    <p>...</p> <!-- Add your work experience details here -->
+    <div class="experience-content">
+      <div class="rounded-rectangle">
+        <p class="company-name">Bosch Global Software Technologies</p>
+      </div>
+      <div class="details-rectangle">
+        <p>
+          Associate Software Engineer | August 2022 – Present
+        </p>
+        <ul>
+          <li>Application Software developer for Antilock Braking Systems (ABS) for EU and North American Projects.</li>
+          <li>Proficient in analyzing software requirements, designing solutions, coding, conducting thorough testing, and executing successful deployments.</li>
+          <li>Integrated software at the end of every baseline - combining individual software components and verifying their functionality as a whole.</li>
+          <li>Generated monthly team load reports using PowerBI to assess resource availabilities and foresee overloading situations beforehand.</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="projects">
     <h2>Projects</h2>
-    <p>...</p> <!-- Add your project details here -->
+    <div class="rounded-rectangle">
+      <p class="company-name">Blind Source Signal separation of Polyphonic Music Signals</p>
+    </div>
+    <div class="details-rectangle">
+      <p>...</p> <!-- Add your project details here -->
+    </div>
+
+    <div class="rounded-rectangle">
+      <p class="company-name">Coronavirus Breathalyzer (Design)</p>
+    </div>
+    <div class="details-rectangle">
+      <p>Designed a diagnostic medical device enabling the user to test with 90% or greater accuracy, the presence of SARS Coronavirus-2 in an exhaled breath sample.</p>
+    </div>
+
+    <div class="rounded-rectangle">
+      <p class="company-name">Non-contact Voltage Tester</p>
+    </div>
+    <div class="details-rectangle">
+      <p>Our innovative non-contact voltage tester eliminates the need for physical contact, ensuring user safety during crucial electrical testing. Its intuitive design and clear visual/audio alerts provide instant voltage confirmation, empowering users of all skill levels.</p>
+    </div>
+
+    <div class="rounded-rectangle">
+      <p class="company-name">Arduino Bluetooth Controlled Car</p>
+    </div>
+    <div class="details-rectangle">
+      <p>Developed a Bluetooth Controlled Car using Arduino, which can be controlled using a smartphone.</p>
+    </div>
+  </section>
+
+  <section class="achievements">
+    <h2>Achievements & Co-Curricular Activities</h2>
+    <ul>
+      <li>Mentored new joinees and freshers to ensure a smooth on-boarding experience at Bosch.</li>
+      <li>Volunteer, Careers360, a career development organization.</li>
+      <li>Content Writer, IETE SF MEC and ILLUMINATION on Medium.org [@theroshanantony].</li>
+      <li>Member, Mixed Signals, the electronics student’s organization of Govt. Model Engineering College.</li>
+      <li>Volunteer, Kerala Mapathon, a govt initiative to map residential buildings for better reach in times of natural disasters.</li>
+      <li>Chess Player, ELO rating of 1025.</li>
+      <li>Secured 2nd position for CBSE Under-19 Boys Chess Clusters 2017 (Bahrain).</li>
+      <li>Secured 1st Place for intra-college paper presentation contest.</li>
+      <li>Secured 2nd Place for inter college Electrical Minds Forum Quiz.</li>
+    </ul>
   </section>
 
   <section class="courses">
     <h2>Courses & Certifications</h2>
     <ul class="certificates">
       <!-- Add your courses and certifications here -->
-      <li onclick="showCertificate('certificate1')">Certification 1</li>
-      <li onclick="showCertificate('certificate2')">Certification 2</li>
-      <!-- Add more certifications with unique IDs -->
-    </ul>
-  </section>
-
-  <section class="achievements">
-    <h2>Achievements & Co-Curricular Activities</h2>
-    <ul>
-      <!-- Add your achievements and activities here -->
-      <li>...</li>
+      <li><a href="link-to-self-driving-cars" target="_blank">Introduction to Self-Driving Cars - Coursera, University of Toronto</a></li>
+      <li><a href="link-to-python-course" target="_blank">Python Programming Course - Coursera, University of Michigan</a></li>
+      <li><a href="link-to-html-css" target="_blank">HTML and CSS for Developers - Coursera, University of Michigan</a></li>
+      <li><a href="link-to-remote-sensing" target="_blank">Applications of Remote Sensing - Indian Institute of Remote Sensing (IIRS) - ISRO</a></li>
+      <li><a href="link-to-google-cloud" target="_blank">The 30 days of Google Cloud program - Google Developers and Qwiklabs</a></li>
+      <li><a href="link-to-it-support-certification" target="_blank">Google IT Support Professional Certification - Coursera, in association with Google</a></li>
+      <li><a href="link-to-energy-production" target="_blank">Energy Production, Distribution and Safety Specialization - Coursera, State University of New York (SUNY)</a></li>
+      <li><a href="link-to-solar-energy" target="_blank">Solar Energy for Engineers, Architects and Code Inspectors Specialization - Coursera, State University of New York (SUNY)</a></li>
+      <li><a href="link-to-iot" target="_blank">Introduction to Programming the Internet of Things Specialization - Coursera, University of California Irvine</a></li>
+      <li><a href="link-to-aws-cloud" target="_blank">Amazon Web Services Cloud Computing Specialization - Coursera, in association with Amazon Web Services</a></li>
     </ul>
   </section>
 
@@ -174,8 +232,6 @@
     <img src="" alt="Certificate" class="certificate-image" id="certificate-image">
   </div>
 
-  <a href="#" onclick="downloadResume()" class="download-button">Download Resume</a>
-
   <script>
     function showCertificate(certificateId) {
       const certificateOverlay = document.getElementById('certificate-overlay');
@@ -194,28 +250,6 @@
 
       // Show the certificate overlay
       certificateOverlay.style.display = 'flex';
-    }
-
-    function downloadResume() {
-      // Replace with the actual path to your PDF resume
-      const resumePath = 'path/to/your-resume.pdf';
-      const link = document.createElement('a');
-      link.href = resumePath;
-      link.download = 'Your_Name_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    function showResume() {
-      // Hide the welcome screen
-      document.querySelector('.welcome-screen').style.display = 'none';
-      
-      // Display the resume content
-      const resumeSections = document.querySelectorAll('section');
-      resumeSections.forEach(section => {
-        section.style.display = 'block';
-      });
     }
   </script>
 

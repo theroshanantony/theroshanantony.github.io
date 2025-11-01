@@ -1,343 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roshan's Resume</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f5f9; /* Pastel blue background */
-      color: #1c2732; /* Dark text color */
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROSHAN ANTONY | Automotive Functional Safety Specialist</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Custom styles and LUXURY color scheme */
+        :root {
+            --primary-color: #f59e0b; /* Amber/Gold accent */
+            --bg-dark: #1f2937; /* Deep Charcoal background */
+            --card-dark: #374151; /* Darker Card background */
+            --text-light: #f3f4f6; /* Off-white text */
+        }
 
-    header {
-      background-color: #61a0af; /* Header background color */
-      padding: 20px;
-      text-align: center;
-      color: #fff; /* Header text color */
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      cursor: pointer;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            
+            /* SCROLL SNAP CONTAINER */
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+        
+        /* Full-screen section styling */
+        .snap-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            padding: 2rem 1rem;
+        }
 
-    section {
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #fff; /* White background for each section */
-      margin-top: 20px;
-    }
+        /* CARD STYLING & ANIMATION SETUP */
+        .content-card {
+            background-color: var(--card-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
+            overflow: hidden; /* Hide content before slide-in */
+        }
+        
+        /* Initial state: Hidden (off-screen and transparent) */
+        .content-hidden {
+            opacity: 0;
+            transform: translateY(50px); /* Start 50px below its final position */
+        }
 
-    .welcome-screen {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+        /* Final state: Visible (on-screen and opaque) */
+        .content-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .welcome-text {
-      max-width: 60%;
-      margin: 0 auto;
-    }
+        /* Helper Styles */
+        .text-accent { color: var(--primary-color); }
+        .border-accent { border-color: var(--primary-color); }
 
-    .welcome-photo {
-      width: 50%;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
+        /* Timeline styling for contrast against dark background */
+        .timeline-entry::before {
+            background-color: rgba(255, 255, 255, 0.2);
+            left: 1.5rem;
+        }
+        
+        .timeline-bullet {
+            background-color: var(--primary-color);
+            left: 1.2rem;
+        }
 
-    .experience-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+        .timeline-content {
+            padding-left: 3.5rem;
+        }
+        
+        /* List item checkmark in gold */
+        .resume-list li::before {
+            content: "\f058"; /* Checkmark circle for modern look */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary-color); /* Gold Checkmark */
+            position: absolute;
+            left: 0.5rem; /* Adjust for better alignment */
+            top: 0.25rem;
+        }
 
-    .company-logo {
-      width: 50px; /* Adjust the size of the logo */
-      margin-right: 10px;
-    }
-
-    .company-name {
-      display: flex;
-      align-items: center;
-      font-size: 24px; /* Increased font size for the company name */
-      font-weight: bold;
-    }
-
-    .rounded-rectangle {
-      background-color: #aec9d9; /* Whitish pastel blue background for work experience */
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-    }
-
-    .details-rectangle {
-      background-color: #fff; /* White background for work experience details */
-      padding: 20px;
-      border-radius: 10px;
-      margin-left: 20px;
-      flex-grow: 1;
-    }
-
-    h2 {
-      font-family: 'Comic Sans MS', sans-serif; /*the FONTTTTTTTT?*/
-      font-size: 32px;
-      color: #3b4b5a; /* Subheadings color */
-      margin-bottom: 10px;
-    }
-
-    .bullet-points {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    .certificates {
-      border-radius: 10px;
-      background-color: #fff; /* White background for certificates */
-      margin-top: 20px;
-      padding: 15px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-      cursor: pointer;
-      color: #1c2732; /* Dark text color */
-    }
-
-    .competencies {
-      background-color: #fff; /* White background for competencies */
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    .competency-rectangle {
-      background-color: #aec9d9; /* Whitish pastel blue background for competencies */
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .references {
-      background-color: #fff; /* White background for references */
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    .certificate-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      color: #fff;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
-
-    .certificate-image {
-      max-width: 80%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-
-    a {
-      color: #0066cc; /* Link color */
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    a:hover {
-      color: #004080; /* Link color on hover */
-    }
-  </style>
+    </style>
 </head>
-<body>
+<body class="min-h-screen">
 
-  <header>
-    <h1>ROSHAN ANTONY</h1>
-    <p>Electronics & IT Professional</p>
-  </header>
+    <!-- SECTION 1: HEADER & CONTACT INFO -->
+    <section id="header-snap" class="snap-section">
+        <header class="w-full max-w-4xl">
+            <div id="header-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-wider text-white leading-tight">ROSHAN ANTONY</h1>
+                <h2 class="text-2xl md:text-3xl text-accent font-light mb-6 mt-1">Automotive Functional Safety Specialist</h2>
+                
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-6 text-sm text-gray-400 mt-6">
+                    <a href="tel:+919188703044" class="flex items-center hover:text-accent transition">
+                        <i class="fas fa-phone mr-2 w-4 text-accent"></i> +91 9188703044
+                    </a>
+                    <a href="mailto:roshanantony2051@gmail.com" class="flex items-center hover:text-accent transition">
+                        <i class="fas fa-envelope mr-2 w-4 text-accent"></i> roshanantony2051@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/roshanantony" target="_blank" class="flex items-center hover:text-accent transition">
+                        <i class="fab fa-linkedin mr-2 w-4 text-accent"></i> linkedin.com/in/roshanantony
+                    </a>
+                    <a href="https://github.com/roshan-antony" target="_blank" class="flex items-center hover:text-accent transition">
+                        <i class="fab fa-github mr-2 w-4 text-accent"></i> github.com/roshan-antony
+                    </a>
+                    <span class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2 w-4 text-accent"></i> Hyderabad, India
+                    </span>
+                </div>
+            </div>
+        </header>
+    </section>
 
-  <!-- Welcome Screen -->
-  <section class="welcome-screen">
-    <div class="welcome-text">
-      <img src="img/LEME.jfif" alt="my Photo" class="welcome-photo">
-      <h1 style="font-size: 36px; font-weight: bold;">Hi there, Welcome to My webResume!</h1>
-      <p> <i>Uhh,But first, who is this guy?</i> </p>
-      <p> Yep, I heard that. Im Roshan Antony, a meticulous and result-driven professional having an year of industry experience, seeking a career wherein I can utilize my
-knowledge in electronics and IT, and acquire new skills that would contribute to the organization and aid my professional growth. The following is a summary of my professional and academic life </p>
-    </div>
-  </section>
+    <!-- MAIN CONTENT AREA START -->
+    <main class="w-full max-w-4xl mx-auto">
+    
+        <!-- SECTION 2: PROFILE -->
+        <section id="profile-snap" class="snap-section">
+            <div id="profile-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
+                <h3 class="text-3xl font-bold mb-4 border-b border-accent pb-2 text-accent tracking-wider">Specialist Profile</h3>
+                <p class="text-gray-300 text-lg leading-relaxed font-light">
+                    Highly specialized and results-driven **Automotive Software Engineer** with over 5 years of experience in **Active Safety Systems** (ABS/ESC) and **Functional Safety (ISO 26262)**. Proven expertise in model-based development (ETAS-ASCET), Embedded C/Python, and rigorous safety analysis (FMEA, HARA). Currently focused on next-generation **Brake Actuator Control** systems, leveraging a deep understanding of embedded software processes to ensure system integrity and compliance for global automotive projects.
+                </p>
+            </div>
+        </section>
 
-  <!-- Resume Content -->
-  <section class="experience">
-    <h2>Work Experience</h2>
-    <div class="experience-content">
-      <div class="rounded-rectangle">
-        <img src="img/bgsw.jpg" alt="Company Logo" class="company-logo">
-        <p class="company-name">Bosch Global Software Technologies</p>
-      </div>
-      <div class="details-rectangle">
-        <p>
-          <ul class="bullet-points">
-            <li>Associate Software Engineer | August 2022 – Present</li>
-            <li>Application Software developer for Antilock Braking Systems (ABS) for EU and North American Projects.</li>
-            <li>Proficient in analyzing software requirements, designing solutions, coding, conducting thorough testing, and executing successful deployments.</li>
-            <li>Integrated software at the end of every baseline - combining individual software components and verifying their functionality as a whole.</li>
-            <li>Generated monthly team load reports using PowerBI to assess resource availabilities and foresee overloading situations beforehand.</li>
-          </ul>
-        </p>
-      </div>
-    </div>
-  </section>
+        <!-- SECTION 3: SKILLS -->
+        <section id="skills-snap" class="snap-section">
+            <div id="skills-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
+                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Core Competencies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-12 text-gray-300">
+                    
+                    <div>
+                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-car text-accent mr-3"></i> Functional Safety \& Process</p>
+                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
+                            <li>ISO 26262, IEC 61508</li>
+                            <li>FMEA, FTA, HARA Safety Analysis</li>
+                            <li>Requirements Elicitation (DOORS)</li>
+                            <li>V\&V, Quality Control, Agile</li>
+                        </ul>
+                    </div>
 
-  <section class="projects">
-    <h2>Projects</h2>
+                    <div>
+                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-microchip text-accent mr-3"></i> Embedded Software \& Tools</p>
+                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
+                            <li>Embedded C, Python, MATLAB</li>
+                            <li>ETAS-ASCET (Model-Based Dev)</li>
+                            <li>Jira, Confluence, SharePoint</li>
+                            <li>Tortoise SVN, ClearQuest, TCM</li>
+                        </ul>
+                    </div>
 
-    <!-- Blind Source Signal Separation of Polyphonic Music Signals -->
-    <div class="rounded-rectangle">
-      <p class="company-name">Blind Source Signal Separation of Polyphonic Music Signals</p>
-    </div>
-    <div class="details-rectangle">
-      <p>
-        The primary objective of this project was to conduct a comprehensive evaluation and comparison of various methodologies employed in Blind Source Separation (BSS) for analyzing harmonically related polyphonic signals.
-        The scope of the study encompasses diverse scenarios, including the extraction of distinct instrumental components spanning a wide range of frequencies, vocal isolation from musical compositions, and the elimination of ambient crowd noise from live concert recordings.
-        Also, one medical application that we considered was Blind Separation of Twin Fetal Heartbeats in an Electrocardiogram.
-        The efficacy and quality of the estimated signals are scrutinized through the utilization of multiple quantitative metrics, thus enabling a comprehensive analysis. The research delves into three key areas: (1) BSS algorithms tailored for static models involving instantaneous mixtures, (2) the augmentation of BSS and Independent Component Analysis (ICA) through integration with sparseness or non-negativity constraints, and (3) BSS algorithms specifically designed for dynamic models entailing convolutive mixtures. Furthermore, the project explores three prominent methodologies: Independent Component Analysis (ICA), Non-Negative Matrix Factorization (NMF), and Neural Networks. This endeavor contributes to an in-depth understanding of the effectiveness and suitability of these approaches for Blind Source Separation, thereby facilitating advancements in audio signal processing.
-      </p>
-      <p><strong>Skills:</strong> Convolutional Neural Networks (CNN) · Fourier Analysis · Independent Component Analysis · Machine Learning</p>
-    </div>
+                    <div>
+                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-cogs text-accent mr-3"></i> Systems \& Domains</p>
+                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
+                            <li>Active Safety Systems (ABS/ESC)</li>
+                            <li>Brake Actuator Control</li>
+                            <li>Battery Management Systems (BMS)</li>
+                            <li>Embedded Systems, Asset Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTION 4: EXPERIENCE -->
+        <section id="experience-snap" class="snap-section">
+            <div id="experience-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
+                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Professional Journey</h3>
 
-    <!-- Airbag Jacket for Motorcyclists (Design) -->
-    <div class="rounded-rectangle">
-      <p class="company-name">Airbag Jacket for Motorcyclists (Design)</p>
-    </div>
-    <div class="details-rectangle">
-      <p>
-        The idea was to create an inflatable, reusable airbag for motorcyclists, which can reduce the risk of death or permanent disability in case of a crash. Hence, we came up with the design for an airbag suit for bike riders which deploys with the help of embedded sensors in the suit as and when the suit senses a sudden change in rider's velocity, or before impact.
-      </p>
-    </div>
+                <!-- Experience Entry 1: Hyundai MOBIS -->
+                <div class="timeline-entry">
+                    <div class="timeline-bullet"></div>
+                    <div class="timeline-content">
+                        <div class="flex flex-col sm:flex-row justify-between items-start mb-1">
+                            <h4 class="text-xl font-bold text-white">Senior Research Engineer - Brake Actuator Control</h4>
+                            <span class="text-base font-light text-accent">April 2025 -- Present</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-400 mb-4">Hyundai MOBIS | Hyderabad, India</p>
+                        <ul class="list-none resume-list text-gray-300 text-sm">
+                            <li>Responsible for **ABS/ESC logic development** and electronic parking brakes failure analysis and improvement.</li>
+                            <li>Evaluated system designs, safety mechanisms, diagnostic techniques, and fault-handling strategies to ensure compliance with **functional safety requirements**.</li>
+                            <li>Conducted Functional Safety confirmation reviews and contributed to validation of safety processes and objectives across system development phases.</li>
+                            <li>Experienced in **FMEA, FTA, and HARA safety analysis**, with a solid understanding of functional safety standards such as **ISO 26262**.</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Non-Contact Voltage Tester -->
-    <div class="rounded-rectangle">
-      <p class="company-name">Non-Contact Voltage Tester</p>
-    </div>
-    <div class="details-rectangle">
-      <p>
-        We designed and implemented a Non-Contact Voltage Tester based on the principle of electromagnetic induction.
-        This innovative device incorporates a mechanism that illuminates and triggers an audible alarm and an LED, to confirm the detection of voltage without requiring direct contact.
-        The voltage tester provides a safe, efficient, and user-friendly solution for identifying the presence of electrical potential in a given area, which enhances safety measures and streamlines electrical troubleshooting processes in various applications, ensuring the well-being and operational efficiency of users.
-      </p>
-    </div>
-  </section>
+                <!-- Experience Entry 2: Bosch -->
+                <div class="timeline-entry">
+                    <div class="timeline-bullet"></div>
+                    <div class="timeline-content">
+                        <div class="flex flex-col sm:flex-row justify-between items-start mb-1">
+                            <h4 class="text-xl font-bold text-white">Automotive Software Engineer - Active Safety Systems</h4>
+                            <span class="text-base font-light text-accent">August 2022 -- March 2025</span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-400 mb-4">Bosch Global Software Technologies (BGSW) | Coimbatore, India</p>
+                        <ul class="list-none resume-list text-gray-300 text-sm">
+                            <li>Application Software developer for **Antilock Braking Systems (ABS)** for EU and North American Projects.</li>
+                            <li>Implemented **model-based development** control algorithms for braking systems using **ETAS-ASCET**, compliant with **ISO 26262**.</li>
+                            <li>Proficient in requirements elicitation and traceability for automotive systems using **DOORS**, ensuring compliance with ISO 26262.</li>
+                            <li>Skilled in **unit testing, component testing and simulation testing** of automobile software using Python and Embedded C.</li>
+                            <li>Solid understanding of **Battery Management Systems (BMS)** for electric vehicles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="achievements">
-    <h2>Achievements & Co-Curricular Activities</h2>
-    <ul class="bullet-points">
-      <li>Mentored new joinees and freshers to ensure a smooth on-boarding experience at Bosch.</li>
-      <li>Volunteer, Careers360, a career development organization.</li>
-      <li>Content Writer, IETE SF MEC and ILLUMINATION on Medium.org [@theroshanantony].</li>
-      <li>Member, Mixed Signals, the electronics student’s organization of Govt. Model Engineering College.</li>
-      <li>Volunteer, Kerala Mapathon, a govt initiative to map residential buildings for better reach in times of natural disasters.</li>
-      <li>Chess Player, ELO rating of 1025.</li>
-      <li>Secured 2nd position for CBSE Under-19 Boys Chess Clusters 2017 (Bahrain).</li>
-      <li>Secured 1st Place for intra-college paper presentation contest.</li>
-      <li>Secured 2nd Place for inter college Electrical Minds Forum Quiz.</li>
-    </ul>
-  </section>
+        <!-- SECTION 5: PROJECTS -->
+        <section id="projects-snap" class="snap-section">
+            <div id="projects-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
+                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Academic Projects</h3>
+                
+                <!-- Project Entry 1: BSS -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold text-white">Blind Source Signal Separation of Polyphonic Music</h4>
+                    <span class="text-sm font-light text-gray-400 ml-3">(Sept 2021 -- July 2022)</span>
+                    <ul class="list-none resume-list text-gray-300 text-sm mt-3">
+                        <li>Conducted comprehensive evaluation of **Blind Source Separation (BSS)** methodologies for polyphonic signals (e.g., vocal isolation).</li>
+                        <li>Investigated medical application: Blind Separation of **Twin Fetal Heartbeats** in an Electrocardiogram.</li>
+                    </ul>
+                </div>
 
-  <section class="courses">
-    <h2>Courses & Certifications</h2>
-    <ul class="certificates">
-      <!-- Add your courses and certifications here -->
-      <li><a href="link-to-self-driving-cars" target="_blank">Introduction to Self-Driving Cars - Coursera, University of Toronto</a></li>
-      <li><a href="link-to-python-course" target="_blank">Python Programming Course - Coursera, University of Michigan</a></li>
-      <li><a href="link-to-html-css" target="_blank">HTML and CSS for Developers - Coursera, University of Michigan</a></li>
-      <li><a href="link-to-remote-sensing" target="_blank">Applications of Remote Sensing - Indian Institute of Remote Sensing (IIRS) - ISRO</a></li>
-      <li><a href="link-to-google-cloud" target="_blank">The 30 days of Google Cloud program - Google Developers and Qwiklabs</a></li>
-      <li><a href="link-to-it-support-certification" target="_blank">Google IT Support Professional Certification - Coursera, in association with Google</a></li>
-      <li><a href="link-to-energy-production" target="_blank">Energy Production, Distribution and Safety Specialization - Coursera, State University of New York (SUNY)</a></li>
-      <li><a href="link-to-solar-energy" target="_blank">Solar Energy for Engineers, Architects and Code Inspectors Specialization - Coursera, State University of New York (SUNY)</a></li>
-      <li><a href="link-to-iot" target="_blank">Introduction to Programming the Internet of Things Specialization - Coursera, University of California Irvine</a></li>
-      <li><a href="link-to-aws-cloud" target="_blank">Amazon Web Services Cloud Computing Specialization - Coursera, in association with Amazon Web Services</a></li>
-    </ul>
-  </section>
+                <!-- Project Entry 2: Arduino Car -->
+                <div>
+                    <h4 class="text-xl font-bold text-white">Bluetooth Controlled Arduino Car</h4>
+                    <span class="text-sm font-light text-gray-400 ml-3">(Nov 2019)</span>
+                    <ul class="list-none resume-list text-gray-300 text-sm mt-3">
+                        <li>Constructed an Arduino-based robotic car with remote control via a smartphone application (Bluetooth module).</li>
+                        <li>Integrated motor drivers and sensor systems for obstacle detection and collision avoidance.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section class="competencies">
-    <h2>Core Competencies / Skills</h2>
-    <div class="competency-rectangle">
-      <ul>
-        <li>Microsoft Office (Word, Excel, PowerPoint & PowerBI)</li>
-      </ul>
-    </div>
-    <div class="competency-rectangle">
-      <ul>
-        <li>Quality Control</li>
-      </ul>
-    </div>
-    <div class="competency-rectangle">
-      <ul>
-        <li>Agile Methodologies</li>
-      </ul>
-    </div>
-    <div class="competency-rectangle">
-      <ul>
-        <li>AutoCAD</li>
-      </ul>
-    </div>
-    <div class="competency-rectangle">
-      <ul>
-        <li>Programming Languages: Python and Embedded C</li>
-        <!-- Add more skills as needed -->
-      </ul>
-    </div>
-  </section>
+        <!-- SECTION 6: ACCREDITATIONS & LANGUAGES -->
+        <section id="education-snap" class="snap-section">
+            <div id="education-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
+                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Accreditations & Languages</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- EDUCATION -->
+                    <div class="lg:col-span-1">
+                        <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Education</h4>
+                        <div class="mb-4">
+                            <h5 class="text-lg font-bold text-white">B.Tech (Honours) ECE</h5>
+                            <p class="text-sm font-medium text-gray-400">APJ Abdul Kalam Kerala Technological University</p>
+                            <p class="text-xs text-gray-500 mt-1">Aug 2018 -- Aug 2022 | GPA: 8.36/10.0</p>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white">Class XII - Science</h5>
+                            <p class="text-sm font-medium text-gray-400">CBSE - Delhi, Bahrain</p>
+                            <p class="text-xs text-gray-500 mt-1">89.6\%</p>
+                        </div>
+                    </div>
 
-  <section class="references">
-    <h2>References</h2>
-    <div class="rounded-rectangle">
-      <p>Available upon request.</p>
-    </div>
-  </section>
+                    <!-- CERTIFICATIONS -->
+                    <div class="lg:col-span-2">
+                        <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Certifications \& Co-Curricular</h4>
+                        <ul class="list-none resume-list text-gray-300 text-sm space-y-3">
+                            <li><span class="font-medium text-white">Amazon Web Services Cloud Computing Specialization</span></li>
+                            <li><span class="font-medium text-white">Google IT Support Professional Certification</span></li>
+                            <li>Earned **Level 2 Korean language certification** via Hyundai MOBIS internal program.</li>
+                            <li>Achieved 2nd place in the **Bahrain India Under 19 Chess Clusters Contest 2017**.</li>
+                        </ul>
+                    </div>
+                </div>
 
-  <div class="certificate-overlay" id="certificate-overlay">
-    <img src="" alt="Certificate" class="certificate-image" id="certificate-image">
-  </div>
+                <div class="mt-8 pt-8 border-t border-gray-700">
+                    <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Languages Known</h4>
+                    <div class="text-sm text-gray-300">
+                        <span class="text-accent font-semibold">Native:</span> Malayalam, Hindi
+                        <span class="mx-4 text-gray-500">|</span>
+                        <span class="text-accent font-semibold">Proficient:</span> English (C2)
+                        <span class="mx-4 text-gray-500">|</span>
+                        <span class="text-accent font-semibold">Basic:</span> German (A1), Korean
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script>
-    function showCertificate(certificateId) {
-      const certificateOverlay = document.getElementById('certificate-overlay');
-      const certificateImage = document.getElementById('certificate-image');
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all snap-sections
+            const sections = document.querySelectorAll('.snap-section');
+            
+            // Create the Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Find the content card inside the intersecting section
+                    const contentCard = entry.target.querySelector('.content-card');
+                    
+                    if (contentCard) {
+                        if (entry.isIntersecting) {
+                            // When the section enters the viewport, trigger the animation
+                            contentCard.classList.remove('content-hidden');
+                            contentCard.classList.add('content-visible');
+                        } else {
+                            // When the section leaves the viewport, reset the state
+                            contentCard.classList.remove('content-visible');
+                            contentCard.classList.add('content-hidden');
+                        }
+                    }
+                });
+            }, {
+                // Configure the observer to trigger when 60% of the section is visible
+                threshold: 0.6,
+            });
 
-      // Set the source of the certificate image based on the clicked certificate
-      switch (certificateId) {
-        case 'certificate1':
-          certificateImage.src = 'path/to/certificate1.jpg'; // Replace with the actual path
-          break;
-        case 'certificate2':
-          certificateImage.src = 'path/to/certificate2.jpg'; // Replace with the actual path
-          break;
-        // Add more cases for additional certificates
-      }
+            // Attach the observer to each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
 
-      // Show the certificate overlay
-      certificateOverlay.style.display = 'flex';
-    }
-  </script>
-
+            // Manually trigger the first section to appear immediately on load
+            const headerCard = document.getElementById('header-card');
+            if (headerCard) {
+                headerCard.classList.remove('content-hidden');
+                headerCard.classList.add('content-visible');
+            }
+        });
+    </script>
 </body>
 </html>

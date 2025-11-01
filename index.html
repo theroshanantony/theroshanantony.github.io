@@ -3,336 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROSHAN ANTONY | Automotive Functional Safety Specialist</title>
+    <title>ROSHAN ANTONY - Automotive Functional Safety Specialist</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Load Inter Font -->
     <style>
-        /* Custom styles and LUXURY color scheme */
-        :root {
-            --primary-color: #f59e0b; /* Amber/Gold accent */
-            --bg-dark: #1f2937; /* Deep Charcoal background */
-            --card-dark: #374151; /* Darker Card background */
-            --text-light: #f3f4f6; /* Off-white text */
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            
-            /* SCROLL SNAP CONTAINER */
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            scroll-behavior: smooth;
+            background-color: #1f2937; /* Deep Charcoal Background */
+            color: #e5e7eb; /* Off-White Text */
+            line-height: 1.6;
         }
-        
-        /* Full-screen section styling */
-        .snap-section {
-            scroll-snap-align: start;
-            min-height: 100vh;
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            padding: 2rem 1rem;
+        .accent {
+            color: #3b82f6; /* Bright Blue Accent */
         }
-
-        /* CARD STYLING & ANIMATION SETUP */
-        .content-card {
-            background-color: var(--card-dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
-            overflow: hidden; /* Hide content before slide-in */
+        .section-header {
+            border-bottom: 2px solid #374151; /* Darker border for separation */
+            color: #3b82f6;
         }
-        
-        /* Initial state: Hidden (off-screen and transparent) */
-        .content-hidden {
-            opacity: 0;
-            transform: translateY(50px); /* Start 50px below its final position */
+        .card {
+            background-color: #374151; /* Darker background for cards/sections */
         }
-
-        /* Final state: Visible (on-screen and opaque) */
-        .content-visible {
-            opacity: 1;
-            transform: translateY(0);
+        .list-bullet {
+            color: #3b82f6;
         }
-
-        /* Helper Styles */
-        .text-accent { color: var(--primary-color); }
-        .border-accent { border-color: var(--primary-color); }
-
-        /* Timeline styling for contrast against dark background */
-        .timeline-entry::before {
-            background-color: rgba(255, 255, 255, 0.2);
-            left: 1.5rem;
+        /* Styles for the Game Canvas */
+        #gameCanvas {
+            border: 2px solid #3b82f6;
+            background-color: #111827; /* Very Dark Canvas */
         }
-        
-        .timeline-bullet {
-            background-color: var(--primary-color);
-            left: 1.2rem;
+        #gameContainer {
+            min-height: 350px;
+            display: none; /* Hidden by default */
         }
-
-        .timeline-content {
-            padding-left: 3.5rem;
-        }
-        
-        /* List item checkmark in gold */
-        .resume-list li::before {
-            content: "\f058"; /* Checkmark circle for modern look */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: var(--primary-color); /* Gold Checkmark */
-            position: absolute;
-            left: 0.5rem; /* Adjust for better alignment */
-            top: 0.25rem;
-        }
-
     </style>
 </head>
-<body class="min-h-screen">
+<body class="p-4 sm:p-8">
 
-    <!-- SECTION 1: HEADER & CONTACT INFO -->
-    <section id="header-snap" class="snap-section">
-        <header class="w-full max-w-4xl">
-            <div id="header-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden">
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-wider text-white leading-tight">ROSHAN ANTONY</h1>
-                <h2 class="text-2xl md:text-3xl text-accent font-light mb-6 mt-1">Automotive Functional Safety Specialist</h2>
-                
-                <!-- Contact Info -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-4 gap-x-6 text-sm text-gray-400 mt-6">
-                    <a href="tel:+919188703044" class="flex items-center hover:text-accent transition">
-                        <i class="fas fa-phone mr-2 w-4 text-accent"></i> +91 9188703044
-                    </a>
-                    <a href="mailto:roshanantony2051@gmail.com" class="flex items-center hover:text-accent transition">
-                        <i class="fas fa-envelope mr-2 w-4 text-accent"></i> roshanantony2051@gmail.com
-                    </a>
-                    <a href="https://linkedin.com/in/roshanantony" target="_blank" class="flex items-center hover:text-accent transition">
-                        <i class="fab fa-linkedin mr-2 w-4 text-accent"></i> linkedin.com/in/roshanantony
-                    </a>
-                    <a href="https://github.com/roshan-antony" target="_blank" class="flex items-center hover:text-accent transition">
-                        <i class="fab fa-github mr-2 w-4 text-accent"></i> github.com/roshan-antony
-                    </a>
-                    <span class="flex items-center">
-                        <i class="fas fa-map-marker-alt mr-2 w-4 text-accent"></i> Hyderabad, India
-                    </span>
-                </div>
-            </div>
+    <div id="resume-container" class="max-w-6xl mx-auto shadow-2xl rounded-lg overflow-hidden">
+
+        <!-- Header: Name and Title -->
+        <header class="p-6 text-center bg-gray-800 text-white rounded-t-lg">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">ROSHAN ANTONY</h1>
+            <p class="text-xl sm:text-2xl font-light accent mt-2">Automotive Functional Safety Specialist | Active Safety Systems</p>
         </header>
-    </section>
 
-    <!-- MAIN CONTENT AREA START -->
-    <main class="w-full max-w-4xl mx-auto">
-    
-        <!-- SECTION 2: PROFILE -->
-        <section id="profile-snap" class="snap-section">
-            <div id="profile-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
-                <h3 class="text-3xl font-bold mb-4 border-b border-accent pb-2 text-accent tracking-wider">Specialist Profile</h3>
-                <p class="text-gray-300 text-lg leading-relaxed font-light">
-                    Highly specialized and results-driven **Automotive Software Engineer** with over 5 years of experience in **Active Safety Systems** (ABS/ESC) and **Functional Safety (ISO 26262)**. Proven expertise in model-based development (ETAS-ASCET), Embedded C/Python, and rigorous safety analysis (FMEA, HARA). Currently focused on next-generation **Brake Actuator Control** systems, leveraging a deep understanding of embedded software processes to ensure system integrity and compliance for global automotive projects.
-                </p>
-            </div>
-        </section>
+        <!-- Main Content Area: Two Columns on Desktop -->
+        <div class="grid grid-cols-1 lg:grid-cols-3">
 
-        <!-- SECTION 3: SKILLS -->
-        <section id="skills-snap" class="snap-section">
-            <div id="skills-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
-                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Core Competencies</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-12 text-gray-300">
-                    
-                    <div>
-                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-car text-accent mr-3"></i> Functional Safety \& Process</p>
-                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
-                            <li>ISO 26262, IEC 61508</li>
-                            <li>FMEA, FTA, HARA Safety Analysis</li>
-                            <li>Requirements Elicitation (DOORS)</li>
-                            <li>V\&V, Quality Control, Agile</li>
-                        </ul>
-                    </div>
+            <!-- Sidebar (Left Column: 1/3) -->
+            <aside class="lg:col-span-1 p-6 space-y-6 card border-r-2 border-gray-700">
 
-                    <div>
-                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-microchip text-accent mr-3"></i> Embedded Software \& Tools</p>
-                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
-                            <li>Embedded C, Python, MATLAB</li>
-                            <li>ETAS-ASCET (Model-Based Dev)</li>
-                            <li>Jira, Confluence, SharePoint</li>
-                            <li>Tortoise SVN, ClearQuest, TCM</li>
-                        </ul>
-                    </div>
+                <!-- Contact Information -->
+                <section>
+                    <h2 class="section-header text-lg font-bold pb-2 mb-3">CONTACT</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <span class="accent mr-2">📞</span> +91 9188703044
+                        </li>
+                        <li>
+                            <span class="accent mr-2">📧</span> <a href="mailto:roshanantony2051@gmail.com" class="hover:underline">roshanantony2051@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="accent mr-2">🔗</span> <a href="https://linkedin.com/in/roshanantony" class="hover:underline">linkedin.com/in/roshanantony</a>
+                        </li>
+                    </ul>
+                </section>
 
-                    <div>
-                        <p class="font-semibold text-xl text-white mb-2 flex items-center"><i class="fas fa-cogs text-accent mr-3"></i> Systems \& Domains</p>
-                        <ul class="list-none space-y-1 text-sm text-gray-400 pl-0">
-                            <li>Active Safety Systems (ABS/ESC)</li>
-                            <li>Brake Actuator Control</li>
-                            <li>Battery Management Systems (BMS)</li>
-                            <li>Embedded Systems, Asset Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECTION 4: EXPERIENCE -->
-        <section id="experience-snap" class="snap-section">
-            <div id="experience-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
-                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Professional Journey</h3>
+                <!-- Technical Skills -->
+                <section>
+                    <h2 class="section-header text-lg font-bold pb-2 mb-3">TECHNICAL SKILLS</h2>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <strong class="accent block">Programming/Modeling:</strong> Python, Embedded C, MATLAB
+                        </li>
+                        <li>
+                            <strong class="accent block">Automotive Standards:</strong> ISO 26262 (Functional Safety, HARA, FMEA, FTA), IEC 61508
+                        </li>
+                        <li>
+                            <strong class="accent block">Tools & Platforms:</strong> ETAS-ASCET, IBM Rational DOORS, Jira, Confluence, SharePoint, Power BI, TCM, Tortoise SVN, ClearQuest
+                        </li>
+                        <li>
+                            <strong class="accent block">Systems:</strong> ABS/ESC Logic, Electronic Parking Brakes, BMS (Battery Management Systems), Embedded Software Development
+                        </li>
+                        <li>
+                            <strong class="accent block">Process:</strong> Requirements Elicitation \& Traceability, V\&V (Verification \& Validation), Model-Based Development, Agile Methodologies
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- Languages & Proficiency -->
+                <section>
+                    <h2 class="section-header text-lg font-bold pb-2 mb-3">LANGUAGES</h2>
+                    <table class="w-full text-sm">
+                        <tbody>
+                            <tr><td class="w-1/2 font-semibold pt-1">English</td><td class="w-1/2">Proficient (C2)</td></tr>
+                            <tr><td class="w-1/2 font-semibold pt-1">Hindi</td><td class="w-1/2">Native proficiency</td></tr>
+                            <tr><td class="w-1/2 font-semibold pt-1">Malayalam</td><td class="w-1/2">Native proficiency</td></tr>
+                            <tr><td class="w-1/2 font-semibold pt-1">German</td><td class="w-1/2">Basic (A1)</td></tr>
+                            <tr><td class="w-1/2 font-semibold pt-1">Korean</td><td class="w-1/2">Basic (L2)</td></tr>
+                        </tbody>
+                    </table>
+                </section>
 
-                <!-- Experience Entry 1: Hyundai MOBIS -->
-                <div class="timeline-entry">
-                    <div class="timeline-bullet"></div>
-                    <div class="timeline-content">
-                        <div class="flex flex-col sm:flex-row justify-between items-start mb-1">
-                            <h4 class="text-xl font-bold text-white">Senior Research Engineer - Brake Actuator Control</h4>
-                            <span class="text-base font-light text-accent">April 2025 -- Present</span>
+                <!-- Certifications -->
+                <section>
+                    <h2 class="section-header text-lg font-bold pb-2 mb-3">CERTIFICATIONS</h2>
+                    <ul class="space-y-2 text-xs">
+                        <li class="hover:text-blue-400">
+                            <span class="list-bullet mr-1">•</span> <a href="https://www.coursera.org/account/accomplishments/specialization/R28ZH6KFMJ4K" target="_blank">Introduction to Programming the IoT Specialization</a>
+                        </li>
+                        <li class="hover:text-blue-400">
+                            <span class="list-bullet mr-1">•</span> <a href="https://coursera.org/share/7fb00def76b82066da1c118113974997" target="_blank">Amazon Web Services Cloud Computing Specialization</a>
+                        </li>
+                        <li class="hover:text-blue-400">
+                            <span class="list-bullet mr-1">•</span> Google IT Support Professional Certification
+                        </li>
+                        <li class="hover:text-blue-400">
+                            <span class="list-bullet mr-1">•</span> The 30 days of Google Cloud program
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!-- Main Content (Right Column: 2/3) -->
+            <main class="lg:col-span-2 p-6 space-y-8">
+
+                <!-- Profile Summary -->
+                <section>
+                    <p class="text-base text-gray-300">
+                        Highly motivated **Automotive Software Engineer** with 5+ years of experience specializing in **Functional Safety (ISO 26262)** and control logic development for **Active Safety Systems**, including ABS, ESC, and Electronic Parking Brakes. Proven ability to implement model-based development (ETAS-ASCET), manage requirements (DOORS), and conduct comprehensive safety analyses (HARA, FMEA, FTA) to deliver high-quality, compliant systems. Seeking to leverage deep domain expertise to drive advanced control strategies and system safety confirmation.
+                    </p>
+                </section>
+
+                <!-- Experience -->
+                <section>
+                    <h2 class="section-header text-xl font-bold pb-2 mb-4">EXPERIENCE</h2>
+
+                    <!-- Role 1: Hyundai MOBIS -->
+                    <div class="mb-6 pb-4 border-b border-gray-700 last:border-b-0">
+                        <div class="flex justify-between items-start text-sm">
+                            <div>
+                                <h3 class="font-bold text-lg">Senior Research Engineer - Brake Actuator Control</h3>
+                                <p class="text-sm italic">Hyundai MOBIS, Hyderabad, India</p>
+                            </div>
+                            <span class="text-gray-400 text-sm">April 2025 – Present</span>
                         </div>
-                        <p class="text-sm font-medium text-gray-400 mb-4">Hyundai MOBIS | Hyderabad, India</p>
-                        <ul class="list-none resume-list text-gray-300 text-sm">
-                            <li>Responsible for **ABS/ESC logic development** and electronic parking brakes failure analysis and improvement.</li>
-                            <li>Evaluated system designs, safety mechanisms, diagnostic techniques, and fault-handling strategies to ensure compliance with **functional safety requirements**.</li>
+                        <ul class="list-disc list-inside ml-4 mt-2 text-sm space-y-1 text-gray-300">
+                            <li>Responsible for ABS/ESC logic development and electronic parking brakes failure analysis and improvement.</li>
+                            <li>Evaluated system designs, safety mechanisms, diagnostic techniques, and fault-handling strategies to ensure compliance with functional safety requirements.</li>
                             <li>Conducted Functional Safety confirmation reviews and contributed to validation of safety processes and objectives across system development phases.</li>
-                            <li>Experienced in **FMEA, FTA, and HARA safety analysis**, with a solid understanding of functional safety standards such as **ISO 26262**.</li>
+                            <li>Collaborated with the RnD team on data acquisition and validation of software logic under vehicle operating conditions, as well as contributing to the development and refinement of related systems.</li>
+                            <li>Experienced in FMEA, FTA, and HARA safety analysis, with a solid understanding of functional safety standards such as ISO 26262 and IEC 61508.</li>
                         </ul>
                     </div>
-                </div>
 
-                <!-- Experience Entry 2: Bosch -->
-                <div class="timeline-entry">
-                    <div class="timeline-bullet"></div>
-                    <div class="timeline-content">
-                        <div class="flex flex-col sm:flex-row justify-between items-start mb-1">
-                            <h4 class="text-xl font-bold text-white">Automotive Software Engineer - Active Safety Systems</h4>
-                            <span class="text-base font-light text-accent">August 2022 -- March 2025</span>
+                    <!-- Role 2: Bosch Global Software Technologies (BGSW) -->
+                    <div>
+                        <div class="flex justify-between items-start text-sm">
+                            <div>
+                                <h3 class="font-bold text-lg">Automotive Software Engineer - Active Safety Systems</h3>
+                                <p class="text-sm italic">Bosch Global Software Technologies (BGSW), Coimbatore, India</p>
+                            </div>
+                            <span class="text-gray-400 text-sm">August 2022 – March 2025</span>
                         </div>
-                        <p class="text-sm font-medium text-gray-400 mb-4">Bosch Global Software Technologies (BGSW) | Coimbatore, India</p>
-                        <ul class="list-none resume-list text-gray-300 text-sm">
-                            <li>Application Software developer for **Antilock Braking Systems (ABS)** for EU and North American Projects.</li>
-                            <li>Implemented **model-based development** control algorithms for braking systems using **ETAS-ASCET**, compliant with **ISO 26262**.</li>
-                            <li>Proficient in requirements elicitation and traceability for automotive systems using **DOORS**, ensuring compliance with ISO 26262.</li>
-                            <li>Skilled in **unit testing, component testing and simulation testing** of automobile software using Python and Embedded C.</li>
-                            <li>Solid understanding of **Battery Management Systems (BMS)** for electric vehicles.</li>
+                        <ul class="list-disc list-inside ml-4 mt-2 text-sm space-y-1 text-gray-300">
+                            <li>Application Software developer for Antilock Braking Systems (ABS) for EU and North American Projects.</li>
+                            <li>Implemented model-based development control algorithms for braking systems using ETAS-ASCET, in compliance with functional safety standards (ISO 26262).</li>
+                            <li>Proficient in requirements elicitation and traceability for automotive systems using DOORS, ensuring compliance with ISO 26262 while performing impact analysis to mitigate risks.</li>
+                            <li>Experienced in design, verification, and utilization of vehicle functions and vehicle data with a good understanding of the Embedded Software development process.</li>
+                            <li>Skilled in unit testing, component testing, and simulation testing of automobile software.</li>
+                            <li>Solid understanding of Battery Management Systems (BMS) for electric vehicles, including monitoring, balancing, and safety protocols.</li>
+                            <li>Took up role of Asset Manager for the department, efficiently collaborating with the IT team to manage all department assets.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: PROJECTS -->
-        <section id="projects-snap" class="snap-section">
-            <div id="projects-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
-                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Academic Projects</h3>
+                </section>
                 
-                <!-- Project Entry 1: BSS -->
-                <div class="mb-8">
-                    <h4 class="text-xl font-bold text-white">Blind Source Signal Separation of Polyphonic Music</h4>
-                    <span class="text-sm font-light text-gray-400 ml-3">(Sept 2021 -- July 2022)</span>
-                    <ul class="list-none resume-list text-gray-300 text-sm mt-3">
-                        <li>Conducted comprehensive evaluation of **Blind Source Separation (BSS)** methodologies for polyphonic signals (e.g., vocal isolation).</li>
-                        <li>Investigated medical application: Blind Separation of **Twin Fetal Heartbeats** in an Electrocardiogram.</li>
-                    </ul>
-                </div>
+                <!-- Education -->
+                <section>
+                    <h2 class="section-header text-xl font-bold pb-2 mb-4">EDUCATION</h2>
+                    <div class="mb-4">
+                        <div class="flex justify-between items-start text-sm">
+                            <div>
+                                <h3 class="font-bold text-lg">Bachelor of Technology (Honours) in ECE</h3>
+                                <p class="text-sm italic">APJ Abdul Kalam Kerala Technological University, Kerala, India</p>
+                            </div>
+                            <span class="text-gray-400 text-sm">Aug 2018 – Aug 2022</span>
+                        </div>
+                        <p class="text-sm mt-1 text-gray-300">GPA: 8.36/10.0</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start text-sm">
+                            <div>
+                                <h3 class="font-bold text-lg">Class XII - Science Stream</h3>
+                                <p class="text-sm italic">Central Board of Secondary Education (CBSE), Bahrain</p>
+                            </div>
+                            <span class="text-gray-400 text-sm">Apr 2017 – Mar 2018</span>
+                        </div>
+                        <p class="text-sm mt-1 text-gray-300">Percentage: 89.6\%</p>
+                    </div>
+                </section>
 
-                <!-- Project Entry 2: Arduino Car -->
-                <div>
-                    <h4 class="text-xl font-bold text-white">Bluetooth Controlled Arduino Car</h4>
-                    <span class="text-sm font-light text-gray-400 ml-3">(Nov 2019)</span>
-                    <ul class="list-none resume-list text-gray-300 text-sm mt-3">
-                        <li>Constructed an Arduino-based robotic car with remote control via a smartphone application (Bluetooth module).</li>
-                        <li>Integrated motor drivers and sensor systems for obstacle detection and collision avoidance.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 6: ACCREDITATIONS & LANGUAGES -->
-        <section id="education-snap" class="snap-section">
-            <div id="education-card" class="content-card p-6 md:p-12 rounded-xl shadow-deep content-hidden w-full">
-                <h3 class="text-3xl font-bold mb-8 border-b border-accent pb-2 text-accent tracking-wider">Accreditations & Languages</h3>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Projects -->
+                <section>
+                    <h2 class="section-header text-xl font-bold pb-2 mb-4">PROJECTS</h2>
                     
-                    <!-- EDUCATION -->
-                    <div class="lg:col-span-1">
-                        <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Education</h4>
-                        <div class="mb-4">
-                            <h5 class="text-lg font-bold text-white">B.Tech (Honours) ECE</h5>
-                            <p class="text-sm font-medium text-gray-400">APJ Abdul Kalam Kerala Technological University</p>
-                            <p class="text-xs text-gray-500 mt-1">Aug 2018 -- Aug 2022 | GPA: 8.36/10.0</p>
-                        </div>
-                        <div>
-                            <h5 class="text-lg font-bold text-white">Class XII - Science</h5>
-                            <p class="text-sm font-medium text-gray-400">CBSE - Delhi, Bahrain</p>
-                            <p class="text-xs text-gray-500 mt-1">89.6\%</p>
-                        </div>
-                    </div>
-
-                    <!-- CERTIFICATIONS -->
-                    <div class="lg:col-span-2">
-                        <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Certifications \& Co-Curricular</h4>
-                        <ul class="list-none resume-list text-gray-300 text-sm space-y-3">
-                            <li><span class="font-medium text-white">Amazon Web Services Cloud Computing Specialization</span></li>
-                            <li><span class="font-medium text-white">Google IT Support Professional Certification</span></li>
-                            <li>Earned **Level 2 Korean language certification** via Hyundai MOBIS internal program.</li>
-                            <li>Achieved 2nd place in the **Bahrain India Under 19 Chess Clusters Contest 2017**.</li>
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-1">Blind Source Signal separation of Polyphonic Music Signals</h3>
+                        <p class="text-gray-400 text-sm italic mb-2">Sept 2021 – July 2022</p>
+                        <ul class="list-disc list-inside ml-4 text-sm space-y-1 text-gray-300">
+                            <li>Conducted a comprehensive evaluation of Blind Source Separation (BSS) methodologies for polyphonic signals.</li>
+                            <li>Explored scenarios such as instrumental component extraction and vocal isolation in live concert recordings.</li>
+                            <li>Investigated medical application: Blind Separation of Twin Fetal Heartbeats in an Electrocardiogram.</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="mt-8 pt-8 border-t border-gray-700">
-                    <h4 class="text-2xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">Languages Known</h4>
-                    <div class="text-sm text-gray-300">
-                        <span class="text-accent font-semibold">Native:</span> Malayalam, Hindi
-                        <span class="mx-4 text-gray-500">|</span>
-                        <span class="text-accent font-semibold">Proficient:</span> English (C2)
-                        <span class="mx-4 text-gray-500">|</span>
-                        <span class="text-accent font-semibold">Basic:</span> German (A1), Korean
+                    
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-1">Bluetooth Controlled Arduino Car</h3>
+                        <p class="text-gray-400 text-sm italic mb-2">Nov 2019</p>
+                        <ul class="list-disc list-inside ml-4 text-sm space-y-1 text-gray-300">
+                            <li>Constructed an Arduino-based robotic car with remote control via a smartphone application.</li>
+                            <li>Utilized a Bluetooth module to establish a reliable wireless connection between the Arduino car and a mobile device.</li>
+                            <li>Integrated a motor driver and sensor systems for obstacle detection and collision avoidance.</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </section>
 
-    </main>
-    
+                </section>
+                
+                <!-- Co-Curricular Activities -->
+                <section>
+                    <h2 class="section-header text-xl font-bold pb-2 mb-4">CO-CURRICULAR ACTIVITIES</h2>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1 text-gray-300">
+                        <li>Earned Level 2 Korean language certification via Hyundai MOBIS internal language development program to support cross-cultural communication.</li>
+                        <li>Contributed to the renovation of government schools, coordinating with local authorities and volunteers to improve educational facilities.</li>
+                        <li>Actively participated in community service projects, including environmental clean-up and volunteering at nursing homes, as part of CSR activities at Bosch India.</li>
+                        <li>Applied skills in electronics by manufacturing numerous battery packs to facilitate mobile phone charging during prolonged power outages in flood-affected regions.</li>
+                        <li>Achieved 2nd place in the Bahrain India Under 19 Chess Clusters Contest 2017, showcasing strategic thinking and competitive spirit.</li>
+                    </ul>
+                </section>
+
+                <!-- References -->
+                <section>
+                    <h2 class="section-header text-xl font-bold pb-2 mb-4">REFERENCES</h2>
+                    <div class="text-sm grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="card p-3 rounded-lg border border-gray-600">
+                            <h4 class="font-bold">Ranjini N P</h4>
+                            <p class="text-gray-400">Technical Lead, BGSW</p>
+                            <p class="text-xs break-all"><a href="mailto:ranjini.np@in.bosch.com" class="hover:underline accent">ranjini.np@in.bosch.com</a></p>
+                        </div>
+                        <div class="card p-3 rounded-lg border border-gray-600">
+                            <h4 class="font-bold">Chinmay Kumar A A</h4>
+                            <p class="text-gray-400">Delivery Lead, BGSW</p>
+                            <p class="text-xs break-all"><a href="mailto:chinmaykumar.aanirudhan@in.bosch.com" class="hover:underline accent">chinmaykumar.aanirudhan@in.bosch.com</a></p>
+                        </div>
+                        <div class="card p-3 rounded-lg border border-gray-600">
+                            <h4 class="font-bold">Dr. Manoj Kumar P</h4>
+                            <p class="text-gray-400">Professor, Model Engineering College</p>
+                            <p class="text-xs break-all"><a href="mailto:mkp@mec.ac.in" class="hover:underline accent">mkp@mec.ac.in</a></p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Game Container and Launch Button -->
+                <section class="mt-8 pt-4">
+                    <button id="launchGameBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg transition duration-200">
+                        Launch Space Safety Simulator (Rocket Dodge Game)
+                    </button>
+                    
+                    <div id="gameContainer" class="mt-6 card p-4 rounded-lg hidden">
+                        <h3 class="text-lg font-bold accent mb-2 text-center">Space Safety Simulator</h3>
+                        <p class="text-sm text-gray-400 mb-4 text-center">Goal: Avoid red meteors. Click and Drag/Tap to move rocket vertically.</p>
+                        <canvas id="gameCanvas" width="600" height="300" class="w-full h-auto rounded-lg mx-auto block"></canvas>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Game Script (Rocket Meteor Dodge) -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Select all snap-sections
-            const sections = document.querySelectorAll('.snap-section');
+        const launchGameBtn = document.getElementById('launchGameBtn');
+        const gameContainer = document.getElementById('gameContainer');
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let animationFrameId;
+        
+        // Game Constants
+        const ROCKET_WIDTH = 40;
+        const ROCKET_HEIGHT = 20;
+        const METEOR_SIZE = 15;
+        const BACKGROUND_SPEED = 2; // Horizontal scroll speed
+        
+        // Game Variables (must be 'let' or 'var' for modification)
+        let player = { x: 50, y: canvas.height / 2, width: ROCKET_WIDTH, height: ROCKET_HEIGHT };
+        let meteors = [];
+        let score = 0;
+        let isGameOver = false;
+        let isDragging = false;
+        
+        // Game Tuning Variables (declared with 'let' for dynamic change)
+        let METEOR_SPEED = 3; // Initial speed
+        let METEOR_SPAWN_INTERVAL = 1500; // Initial interval in ms
+        let lastSpawnTime = 0;
+        
+        // Utility Functions
+        function drawRocket() {
+            // Draw a simple blue rocket (wedge shape)
+            ctx.fillStyle = '#3b82f6'; 
+            ctx.beginPath();
+            ctx.moveTo(player.x, player.y - player.height / 2); // Top tip
+            ctx.lineTo(player.x - player.width, player.y - player.height / 2 + 5); // Back top
+            ctx.lineTo(player.x - player.width, player.y + player.height / 2 - 5); // Back bottom
+            ctx.lineTo(player.x, player.y + player.height / 2); // Bottom tip
+            ctx.closePath();
+            ctx.fill();
+
+            // Draw orange flame (Engine indicator)
+            ctx.fillStyle = '#f97316';
+            ctx.fillRect(player.x - player.width - 5, player.y - 5, 5, 10);
+        }
+
+        function drawMeteor(meteor) {
+            ctx.fillStyle = '#ef4444'; // Red for danger/meteor
+            ctx.fillRect(meteor.x, meteor.y, METEOR_SIZE, METEOR_SIZE);
+        }
+
+        function spawnMeteor() {
+            const y = Math.random() * (canvas.height - METEOR_SIZE);
+            meteors.push({ x: canvas.width, y: y, width: METEOR_SIZE, height: METEOR_SIZE });
+        }
+
+        function updateGame(timestamp) {
+            if (isGameOver) {
+                return;
+            }
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Update meteors (move and check spawn time)
+            if (timestamp - lastSpawnTime > METEOR_SPAWN_INTERVAL) {
+                spawnMeteor();
+                lastSpawnTime = timestamp;
+                // Increase difficulty over time
+                if (METEOR_SPEED < 8) METEOR_SPEED += 0.01;
+                if (METEOR_SPAWN_INTERVAL > 500) METEOR_SPAWN_INTERVAL -= 5;
+            }
+
+            for (let i = meteors.length - 1; i >= 0; i--) {
+                let meteor = meteors[i];
+                meteor.x -= METEOR_SPEED;
+
+                // Check for collision
+                if (player.x < meteor.x + meteor.width &&
+                    player.x + player.width > meteor.x &&
+                    player.y - player.height / 2 < meteor.y + meteor.height &&
+                    player.y + player.height / 2 > meteor.y) {
+                    endGame();
+                    return;
+                }
+
+                // Check if meteor passed the rocket (score)
+                if (meteor.x < player.x && !meteor.scored) {
+                    score += 1;
+                    meteor.scored = true;
+                }
+
+                // Remove off-screen meteors
+                if (meteor.x + METEOR_SIZE < 0) {
+                    meteors.splice(i, 1);
+                } else {
+                    drawMeteor(meteor);
+                }
+            }
+
+            // Keep player within bounds (vertically)
+            player.y = Math.max(player.height / 2, Math.min(canvas.height - player.height / 2, player.y));
             
-            // Create the Intersection Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    // Find the content card inside the intersecting section
-                    const contentCard = entry.target.querySelector('.content-card');
-                    
-                    if (contentCard) {
-                        if (entry.isIntersecting) {
-                            // When the section enters the viewport, trigger the animation
-                            contentCard.classList.remove('content-hidden');
-                            contentCard.classList.add('content-visible');
-                        } else {
-                            // When the section leaves the viewport, reset the state
-                            contentCard.classList.remove('content-visible');
-                            contentCard.classList.add('content-hidden');
-                        }
-                    }
-                });
-            }, {
-                // Configure the observer to trigger when 60% of the section is visible
-                threshold: 0.6,
-            });
+            drawRocket();
+            drawScore();
 
-            // Attach the observer to each section
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            animationFrameId = requestAnimationFrame(updateGame);
+        }
 
-            // Manually trigger the first section to appear immediately on load
-            const headerCard = document.getElementById('header-card');
-            if (headerCard) {
-                headerCard.classList.remove('content-hidden');
-                headerCard.classList.add('content-visible');
+        function drawScore() {
+            ctx.fillStyle = '#e5e7eb';
+            ctx.font = '16px Inter';
+            ctx.textAlign = 'left';
+            ctx.fillText(`Score: ${Math.floor(score)}`, 10, 25);
+        }
+
+        function endGame() {
+            isGameOver = true;
+            cancelAnimationFrame(animationFrameId);
+            ctx.fillStyle = 'rgba(17, 24, 39, 0.9)'; // Dark overlay
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#3b82f6';
+            ctx.font = '30px Inter';
+            ctx.textAlign = 'center';
+            ctx.fillText('CRITICAL FAILURE', canvas.width / 2, canvas.height / 2 - 20);
+            ctx.fillStyle = '#e5e7eb';
+            ctx.font = '18px Inter';
+            ctx.fillText(`Final Score: ${Math.floor(score)}`, canvas.width / 2, canvas.height / 2 + 10);
+            ctx.fillText('Click to Restart', canvas.width / 2, canvas.height / 2 + 40);
+        }
+        
+        function startGame() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            
+            // Reset game state
+            meteors = [];
+            score = 0;
+            isGameOver = false;
+            player.y = canvas.height / 2;
+            METEOR_SPEED = 3;
+            METEOR_SPAWN_INTERVAL = 1500;
+            lastSpawnTime = 0;
+
+            // Start the game loop
+            animationFrameId = requestAnimationFrame(updateGame);
+        }
+        
+        // --- Input Handling (Drag/Touch) ---
+
+        function getMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientY = e.clientY !== undefined ? e.clientY : e.touches[0].clientY;
+            return clientY - rect.top;
+        }
+
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            if (isGameOver) {
+                startGame();
+            }
+        }
+        
+        function stopDrag(e) {
+            isDragging = false;
+        }
+
+        function drag(e) {
+            if (!isDragging || isGameOver) return;
+            e.preventDefault();
+
+            // Direct mapping of cursor Y position to player Y position
+            const mouseY = getMousePos(e);
+            player.y = mouseY;
+        }
+
+        // Mouse Listeners
+        canvas.addEventListener('mousedown', startDrag);
+        document.addEventListener('mouseup', stopDrag); // Listen on document to handle drag off canvas
+        canvas.addEventListener('mousemove', drag);
+        
+        // Touch Listeners
+        canvas.addEventListener('touchstart', startDrag);
+        document.addEventListener('touchend', stopDrag);
+        canvas.addEventListener('touchmove', drag);
+
+        // Resize Canvas and Redraw (for responsiveness)
+        window.addEventListener('resize', () => {
+            const containerWidth = gameContainer.offsetWidth;
+            canvas.width = containerWidth;
+            canvas.height = 300; // Fixed height
+            player.y = canvas.height / 2; // Recenter rocket
+            if (!isGameOver) {
+                // Restart animation to redraw in correct size
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                }
+                animationFrameId = requestAnimationFrame(updateGame);
+            } else {
+                 endGame(); // Redraw game over screen
             }
         });
+
+        // Initialize on button click
+        launchGameBtn.addEventListener('click', () => {
+            if (gameContainer.classList.contains('hidden')) {
+                gameContainer.classList.remove('hidden');
+                // Set initial canvas size based on container
+                canvas.width = gameContainer.offsetWidth;
+                canvas.height = 300;
+                launchGameBtn.textContent = 'Hide Space Safety Simulator';
+                startGame();
+            } else {
+                gameContainer.classList.add('hidden');
+                launchGameBtn.textContent = 'Launch Space Safety Simulator (Rocket Dodge Game)';
+                isGameOver = true;
+                cancelAnimationFrame(animationFrameId);
+            }
+        });
+        
+        // Run resize setup once on load to ensure initial correct sizing
+        window.onload = function() {
+             // Initial canvas setup if the game is launched immediately (though it's hidden)
+             if (!gameContainer.classList.contains('hidden')) {
+                canvas.width = gameContainer.offsetWidth;
+                canvas.height = 300;
+                startGame();
+             }
+        };
     </script>
+
 </body>
 </html>
